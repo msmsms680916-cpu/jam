@@ -6,7 +6,7 @@
 <title>잠수교 야시장</title>
 <meta name="description" content="세계가 찾는 잠수교 야시장 · 한강 위 K-푸드·K-POP·K-패션·K-뷰티, 용산 뮤지엄 버스와 K-컬처 나이트 벨트">
 <meta property="og:title" content="잠수교 야시장">
-<meta property="og:description" content="한강 위, 서울의 밤. 잠수교에서 시작해 용산·이태원·명동·동대문으로 이어지는 K-컬처 야간 관광">
+<meta property="og:description" content="한강 위, 서울의 밤. 잠수교를 중심으로 서울을 잇는 Y축 관광벨트와 한강버스 선착장">
 <meta name="theme-color" content="#070f24">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -347,14 +347,56 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 #iv.z img{width:200%}
 #iv .ivf{flex:none;display:flex;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px))}
 #iv .ivf button{flex:1;height:46px;border-radius:12px;background:rgba(255,255,255,.12);font-weight:700}
+
+/* Y belt */
+.yb{padding:12px 10px 12px}
+.yw svg{display:block;width:100%;height:auto}
+.yc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.yc button{display:flex;flex-direction:column;align-items:flex-start;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--line);text-align:left}
+.yc button.on{border-color:rgba(245,195,91,.7);background:rgba(245,195,91,.1)}
+.yc i{width:22px;height:4px;border-radius:2px;margin-bottom:6px}
+.yc b{font-size:15px;font-weight:900}.yc small{font-size:12px;color:var(--sub);line-height:1.4;margin-top:1px}
+.yn{cursor:pointer}
+@keyframes dash{to{stroke-dashoffset:-40}}
+.yflow{animation:dash 2s linear infinite}
+/* hangang bus */
+.hb{position:relative;display:block;width:100%;border-radius:22px;overflow:hidden;text-align:left;padding:18px 16px 14px;min-height:250px;border:1px solid rgba(255,178,122,.35)}
+.hb>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hb:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,12,40,.55),rgba(7,15,36,.15) 40%,rgba(7,15,36,.9) 78%)}
+.hbt,.pier,.hbm{position:relative;z-index:2}
+.hbt small{font-size:13px;font-weight:700;color:#ffd2a8}
+.hbt b{display:block;font-size:23px;font-weight:900;line-height:1.3;letter-spacing:-.6px;margin-top:3px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.pier{display:flex;justify-content:space-between;align-items:flex-start;margin-top:44px;position:relative}
+.pier:before{content:"";position:absolute;left:6px;right:6px;top:6px;height:3px;border-radius:2px;background:linear-gradient(90deg,#6cb8ff,#9ad0ff)}
+.pier div{position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;width:0;flex:1}
+.pier i{width:15px;height:15px;border-radius:50%;background:#0b1530;border:3px solid #9ad0ff}
+.pier span{font-size:12px;font-weight:700;color:#dfe8fa;white-space:nowrap}
+.pier .me i{width:24px;height:24px;margin-top:-4px;background:var(--gold);border-color:#fff;box-shadow:0 0 14px rgba(245,195,91,.9)}
+.pier .me span{color:var(--gold2);font-weight:900;margin-top:-4px}
+.pier .me em{position:absolute;top:-24px;font-style:normal;font-size:12px;font-weight:900;color:#1a1300;background:var(--gold);border-radius:5px;padding:0 5px;white-space:nowrap}
+.hbm{display:block;margin-top:14px;font-size:13.5px;font-weight:700;color:var(--gold)}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 14px 0}
+.loc div{padding:12px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.loc b{display:block;font-size:14.5px;font-weight:900}.loc small{display:block;font-size:12.5px;color:var(--sub);line-height:1.5;margin-top:3px}
+.pgm{margin:12px 14px 0;display:flex;flex-direction:column;gap:8px}
+.pgm button{display:flex;gap:12px;align-items:center;padding:14px;border-radius:16px;background:var(--card);border:1px solid var(--line);text-align:left;width:100%}
+.pgm i{flex:none;width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-style:normal}
+.pgm i svg{width:24px;height:24px;color:#fff}
+.pgm b{font-size:15.5px;font-weight:900}.pgm small{display:block;font-size:13px;color:var(--sub);line-height:1.5}
+.ycs{display:flex;gap:8px;margin:12px 14px 0}
+.ycs button{flex:1;height:44px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:14px;font-weight:700;color:var(--sub)}
+.ycs button.on{background:rgba(245,195,91,.14);border-color:var(--gold);color:var(--gold2)}
+.ywt{margin:12px 14px 0;padding:10px 8px;border-radius:20px;background:var(--bg2);border:1px solid var(--line)}
+.mode{display:inline-block;font-size:12px;font-weight:900;border-radius:5px;padding:0 6px;margin-left:4px;vertical-align:middle;color:#04203f;background:#9ad0ff}
+
 @media(max-width:360px){.qm i{width:48px;height:48px}.qm button{font-size:12.5px}.hc h2{font-size:24px}.rt span{font-size:12px}.bl img{width:54px;height:54px}.bl button{width:56px}.bl:before{top:27px}.dot{top:23px}.vg{grid-template-columns:repeat(5,1fr);gap:3px}.vg i{width:44px;height:44px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 </head>
 <body>
 <div class="side" aria-hidden="true">
- <div><small>JAMSUGYO NIGHT MARKET</small><h2>세계가 찾는<br>잠수교 야시장</h2><p>한강 위, 도심 속 특별한 야간문화·관광·상권의 새로운 모델.<br>잠수교에서 용산·이태원·명동·동대문까지 이어지는 K-컬처 나이트 벨트.</p></div>
- <div style="text-align:right"><small>YONGSAN MUSEUM BUS</small><h2>낮에는 뮤지엄,<br>밤에는 야시장</h2><p>국립중앙박물관 · 전쟁기념관 · 리움미술관 · BTS 체험관을 돌아 해 질 무렵 잠수교에 도착하는 용산 뮤지엄 버스.</p></div>
+ <div><small>JAMSUGYO NIGHT MARKET</small><h2>세계가 찾는<br>잠수교 야시장</h2><p>한강 위, 도심 속 특별한 야간문화·관광·상권의 새로운 모델.<br>잠수교 한강버스 선착장과 용산 뮤지엄 버스로 낮부터 밤까지.</p></div>
+ <div style="text-align:right"><small>Y-AXIS TOURISM BELT</small><h2>잠수교에서 시작하는<br>서울 Y축 관광벨트</h2><p>이태원 · 남산 · 명동에서 동대문으로, 광화문 · 신촌 · 합정 · 당산을 돌아 한강버스로 다시 잠수교까지.</p></div>
 </div>
 <div id="app">
 <header id="hd">
@@ -388,11 +430,11 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
   <button data-go="map"><i style="background:linear-gradient(150deg,#5b8cff,#3046c9)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></i>야시장 지도</button>
   <button data-zone="A"><i style="background:linear-gradient(150deg,#ffc35b,#e0832a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16a8 8 0 01-16 0z"/><path d="M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3"/><path d="M3 21h18"/></svg></i>K-푸드</button>
   <button data-go="prog"><i style="background:linear-gradient(150deg,#a894ff,#6a4ee0)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3M8 21h8"/></svg></i>공연 일정</button>
-  <button data-tour="mu"><span class="new">NEW</span><i style="background:linear-gradient(150deg,#ff8fc0,#c8467e)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3"/><circle cx="8" cy="14.5" r=".9" fill="currentColor"/><circle cx="16" cy="14.5" r=".9" fill="currentColor"/></svg></i>뮤지엄 버스</button>
-  <button data-tour="belt"><i style="background:linear-gradient(150deg,#58e6cb,#169c88)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5"/></svg></i>K-컬처 벨트</button>
+  <button data-tour="mu"><i style="background:linear-gradient(150deg,#ff8fc0,#c8467e)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3"/><circle cx="8" cy="14.5" r=".9" fill="currentColor"/><circle cx="16" cy="14.5" r=".9" fill="currentColor"/></svg></i>뮤지엄 버스</button>
+  <button data-tour="y"><span class="new">NEW</span><i style="background:linear-gradient(150deg,#58e6cb,#169c88)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5"/></svg></i>Y축 벨트</button>
   <button data-go="my"><i style="background:linear-gradient(150deg,#ffd97a,#d4a22a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l-1 7h3a3 3 0 013 3v2H4v-2a3 3 0 013-3h3z"/><path d="M5 19h14"/></svg></i>스탬프 투어</button>
   <button data-act="safety"><i style="background:linear-gradient(150deg,#7fb6ff,#2f6fd0)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></i>안전·편의</button>
-  <button data-act="way"><i style="background:linear-gradient(150deg,#9aa6c8,#4a5677)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i>오시는 길</button>
+  <button data-tour="boat"><span class="new">NEW</span><i style="background:linear-gradient(150deg,#ffb27a,#d9603b)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h18l-2.5 4h-13z"/><path d="M6 14V9h12v5M9.5 9V6h5v3"/><path d="M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/></svg></i>한강버스</button>
  </div>
 
  <div class="sec">
@@ -412,11 +454,19 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
  </div>
 
  <div class="sec">
-  <div class="st"><h3>K-컬처 나이트 벨트</h3><button class="mr" data-tour="belt">노선 ›</button></div>
-  <div class="card belt">
-   <div class="bl" id="hBl"></div>
-   <div class="bnote">잠수교에서 출발해 <b>용산 · 이태원 · 명동 · 동대문</b>을 잇는 야간 순환 셔틀. 명동이 새로 들어왔어요.</div>
+  <div class="st"><h3>Y축 관광벨트 <span class="new">NEW</span></h3><button class="mr" data-tour="y">노선 ›</button></div>
+  <div class="card yb"><div class="yw" id="hY"></div>
+   <div class="yc"><button data-yc="1"><i style="background:var(--pink)"></i><b>1코스</b><small>이태원·남산·명동·동대문</small></button><button data-yc="2"><i style="background:var(--mint)"></i><b>2코스</b><small>광화문·신촌·합정·당산 → 한강버스</small></button></div>
   </div>
+ </div>
+
+ <div class="sec">
+  <div class="st"><h3>한강버스 잠수교 선착장 <span class="new">제안</span></h3></div>
+  <button class="hb" data-tour="boat"><img data-i="v_rest" alt="" aria-hidden="true">
+   <div class="hbt"><small>노을에서 야경까지, 물 위로 오는 야시장</small><b>한강버스 타고<br>잠수교에 내리다</b></div>
+   <div class="pier" id="hPier"></div>
+   <span class="hbm">노을 크루즈 · 야경 운항 · 2코스 귀환 ›</span>
+  </button>
  </div>
 
  <div class="sec">
@@ -431,9 +481,9 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 
  <div class="sec"><button class="bnr" data-act="safety"><img data-i="safe" alt=""><div><small>안전한 야시장</small><b>인파 관리부터<br>응급 대응까지</b><span>안전·편의 안내 ›</span></div></button></div>
 
- <div class="sec"><button class="pp" data-go="prop"><img data-i="pg_poster" alt="잠수교 야시장 상권 조성 제안서 표지"><div><small>용산구청 귀중 · 2026</small><b>잠수교 야시장<br>상권 조성 제안서</b><p>비전 · K-컬처 벨트 · 뮤지엄 버스 · 안전 · 예산 500억 · 추진 체계 ›</p></div></button></div>
+ <div class="sec"><button class="pp" data-go="prop"><img data-i="pg_poster" alt="잠수교 야시장 상권 조성 제안서 표지"><div><small>용산구청 귀중 · 2026</small><b>잠수교 야시장<br>상권 조성 제안서</b><p>비전 · Y축 관광벨트 · 한강버스 · 뮤지엄 버스 · 안전 · 예산 500억 ›</p></div></button></div>
 
- <div class="foot"><b>잠수교 야시장 (제안 시안)</b><br>운영(안) 매주 금·토·일 18:00~24:00 · 잠수교 보행 구간<br>제안 (주)한강의기적 · 화면의 일정·요금·인원은 시안용 예시입니다.</div>
+ <div class="foot"><b>잠수교 야시장 (제안 시안)</b><br>운영(안) 매주 금·토·일 18:00~24:00 · 잠수교 보행 구간<br>Y축 관광벨트 · 한강버스 잠수교 선착장(유치 제안)<br>제안 (주)한강의기적 · 화면의 일정·요금·인원은 시안용 예시입니다.</div>
 </section>
 
 <!-- MAP -->
@@ -445,7 +495,7 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 
 <!-- TOUR -->
 <section class="vw" id="v-tour">
- <div class="seg"><button data-tseg="mu" class="on">용산 뮤지엄 버스</button><button data-tseg="belt">K-컬처 나이트 벨트</button></div>
+ <div class="seg"><button data-tseg="mu" class="on">뮤지엄 버스</button><button data-tseg="y">Y축 벨트</button><button data-tseg="boat">한강버스</button></div>
  <div id="tourB"></div>
 </section>
 
@@ -463,23 +513,28 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 <!-- PROPOSAL -->
 <section class="vw" id="v-prop">
  <div class="pcv"><img data-i="market" alt=""><div><small>용산구청 귀중 · 2026. 10.</small><h2>한강 잠수교<br>야시장 상권 조성 제안서</h2><p>한강 위, 도심 속 특별한 야간문화·관광·상권의 새로운 모델</p></div></div>
- <div class="toc" id="toc"><button data-to="p1">비전</button><button data-to="p2">K-컬처 벨트</button><button data-to="p3">뮤지엄 버스</button><button data-to="p4">안전관리</button><button data-to="p5">예산 500억</button><button data-to="p6">추진 체계</button><button data-to="p7">기대 효과</button><button data-to="p8">원본</button></div>
+ <div class="toc" id="toc"><button data-to="p1">비전</button><button data-to="p2">Y축 벨트</button><button data-to="pH">한강버스</button><button data-to="p3">뮤지엄 버스</button><button data-to="p4">안전관리</button><button data-to="p5">예산 500억</button><button data-to="p6">추진 체계</button><button data-to="p7">기대 효과</button><button data-to="p8">원본</button></div>
 
  <div class="ps" id="p1"><small>01 VISION</small><h3>세계가 찾는 잠수교 야시장</h3><p>잠수교 보행 구간을 서울의 대표 야간 랜드마크로. 시민이 즐기는 야간경제와 해외 관광객이 찾는 K-컬처 무대를 한 곳에 만듭니다.</p>
-  <div class="vg"><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.2a5 5 0 016 4.8"/></svg></i>시민 힐링<br>문화공간</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></i>지역경제<br>활성화</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i>용산권<br>상권 확장</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></i>국내·외<br>관광명소</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>지속가능한<br>야간경제</div></div>
+  <div class="vg"><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.2a5 5 0 016 4.8"/></svg></i>시민 힐링<br>문화공간</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></i>지역경제<br>활성화</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5"/></svg></i>Y축<br>관광벨트</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></i>국내·외<br>관광명소</div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>지속가능한<br>야간경제</div></div>
  </div>
 
- <div class="ps" id="p2"><small>02 K-CULTURE BELT</small><h3>잠수교에서 시작하는<br>서울 관광 상권 연결 <span class="new">명동 추가</span></h3><p>잠수교 야시장을 중심으로 용산·이태원·명동·동대문 상권을 하나로 잇는 글로벌 관광 벨트를 구축합니다.</p>
-  <div class="card bw"><div class="bl" id="pBl"></div></div>
-  <div class="ow"><div><b>잠수교 야시장</b><small>한강의 밤, K-컬처의 시작</small></div><div><b>용산</b><small>K-콘텐츠 · 뮤지엄 · 문화</small></div><div><b>이태원</b><small>글로벌 문화 · 맛집 · 패션</small></div><div><b>명동 <span class="new">NEW</span></b><small>K-뷰티 · 쇼핑 · 외국인 관광 1번지</small></div><div style="grid-column:1/-1"><b>동대문</b><small>패션 · 뷰티 · 쇼핑 허브, 심야 쇼핑</small></div></div>
+ <div class="ps" id="p2"><small>02 Y-AXIS TOURISM BELT</small><h3>잠수교를 중심으로<br>서울을 잇는 Y축 관광벨트</h3><p>잠수교에서 출발해 이태원·남산·명동까지 하나의 축으로 올라간 뒤, 동쪽(동대문)과 서쪽(광화문·신촌·합정·당산)으로 갈라지는 Y자 관광벨트. 서쪽 코스는 한강버스로 잠수교에 돌아와 서울 도심을 한 바퀴 잇습니다.</p>
+  <div class="ywt" id="pY" style="margin:14px 0 0"></div>
+  <div class="ow"><div><b><span style="color:var(--pink)">━</span> 1코스</b><small>잠수교 → 이태원 → 남산 → 명동 → 동대문</small></div><div><b><span style="color:var(--mint)">━</span> 2코스</b><small>잠수교 → 이태원 → 남산 → 명동 → 광화문 → 신촌 → 합정 → 당산 → 한강버스로 잠수교</small></div><div style="grid-column:1/-1"><b>여의도 잔류 가능</b><small>2코스 한강버스 구간에서 여의도에 내려 머물 수 있어요.</small></div></div>
  </div>
 
- <div class="ps" id="p3"><small>03 NEW PROGRAM</small><h3>용산 뮤지엄 버스 <span class="new">신규</span></h3><p>낮에는 용산의 대표 문화시설을 버스로 돌고, 해 질 무렵 잠수교 야시장에 내려 밤까지 머무는 체류형 코스입니다. 낮 관광객을 야간 상권으로 자연스럽게 연결합니다.</p>
+ <div class="ps" id="pH"><small>03 HANGANG BUS</small><h3>한강버스 정류장<br>잠수교 유치 <span class="new">신규</span></h3><p>잠수교 남단 또는 북단에 한강버스 선착장을 유치해 야시장과 물길을 바로 연결합니다. 한강버스 이용 활성화, 노을 관광, 야간 관광을 함께 살립니다.</p>
+  <div class="card" style="padding:34px 10px 12px;margin-top:14px;background:linear-gradient(150deg,#3a2350,#0f2150)"><div class="pier" id="pPier" style="margin-top:0"></div><p class="nt" style="margin-top:12px;padding:0 4px">현재 7개 선착장(마곡·망원·여의도·잠원·옥수·뚝섬·잠실) 중 여의도와 잠원 사이에 잠수교 선착장을 더하는 안</p></div>
+  <div class="eff"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h18l-2.5 4h-13z"/><path d="M6 14V9h12v5M9.5 9V6h5v3"/><path d="M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/></svg><b>한강버스 활성화</b><small>야시장 방문 수요로 저녁 시간대 이용 증가</small></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg><b>노을 관광</b><small>해 질 무렵 한강 위에서 노을을 보고 도착</small></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><b>야간 관광</b><small>야경 운항 · 달빛무지개분수와 연계(시즌)</small></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5"/></svg><b>Y축 벨트 완성</b><small>2코스를 물길로 이어 순환 노선 완성</small></div></div>
+ </div>
+
+ <div class="ps" id="p3"><small>04 NEW PROGRAM</small><h3>용산 뮤지엄 버스 <span class="new">신규</span></h3><p>낮에는 용산의 대표 문화시설을 버스로 돌고, 해 질 무렵 잠수교 야시장에 내려 밤까지 머무는 체류형 코스입니다. 낮 관광객을 야간 상권으로 자연스럽게 연결합니다.</p>
   <div class="card" style="padding:4px 14px;margin-top:14px" id="pMu"></div>
   <button class="btn l" data-tour="mu" style="margin-top:10px">앱에서 코스·예약 화면 보기 ›</button>
  </div>
 
- <div class="ps" id="p4"><small>04 SAFETY</small><h3>시민이 안심하고 즐기는<br>안전한 야시장</h3><p>서울시·용산구청·경찰·소방·의료기관·운영사가 함께하는 다층 안전관리 체계.</p>
+ <div class="ps" id="p4"><small>05 SAFETY</small><h3>시민이 안심하고 즐기는<br>안전한 야시장</h3><p>서울시·용산구청·경찰·소방·의료기관·운영사가 함께하는 다층 안전관리 체계.</p>
   <div class="sf">
    <div><img data-i="s_crowd" alt=""><b>인파 관리·동선</b><small>입·출구 분리, 일방통행 동선, CCTV 실시간 모니터링</small></div>
    <div><img data-i="s_traffic" alt=""><b>교통 통제·접근</b><small>차량 통제 구간 지정, 대중교통·셔틀 연계</small></div>
@@ -490,17 +545,17 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
   </div>
  </div>
 
- <div class="ps" id="p5"><small>05 BUDGET</small><h3>총 사업비 500억 원<br>단계별 분산 투입</h3><p>공공과 민간의 협력으로 재원을 나눠 지자체 부담을 줄이고 지속가능한 운영 기반을 만듭니다. (제안 기준, 협의에 따라 변동)</p>
+ <div class="ps" id="p5"><small>06 BUDGET</small><h3>총 사업비 500억 원<br>단계별 분산 투입</h3><p>공공과 민간의 협력으로 재원을 나눠 지자체 부담을 줄이고 지속가능한 운영 기반을 만듭니다. (제안 기준, 협의에 따라 변동)</p>
   <div class="card bud"><svg viewBox="0 0 42 42" id="dn"></svg><ul id="dnL"></ul></div>
   <div class="stg" id="stg"></div>
  </div>
 
- <div class="ps" id="p6"><small>06 ORGANIZATION</small><h3>사업 추진 주체 및<br>관계기관 협력체계</h3>
+ <div class="ps" id="p6"><small>07 ORGANIZATION</small><h3>사업 추진 주체 및<br>관계기관 협력체계</h3>
   <div class="card org"><small>사업 추진 주체</small><h4>(주)한강의기적</h4><dl><dt>대표이사</dt><dd>조경래</dd><dt>사업명</dt><dd>잠수교 야시장 상권 조성 사업</dd><dt>사업분야</dt><dd>관광 · 문화 · 상권 개발 및 운영</dd><dt>주요역할</dt><dd>사업 기획, 투자 유치, 시설 조성, 운영 총괄</dd></dl>
    <div class="ptn"><span class="chip">서울특별시 · 정책·행정 협력</span><span class="chip">용산구청 · 사업 총괄 협력</span><span class="chip">서초구청 · 구간 협의</span><span class="chip">경찰·소방·의료 · 안전</span><span class="chip">민간 파트너 · 콘텐츠·운영</span></div></div>
  </div>
 
- <div class="ps" id="p7"><small>07 IMPACT</small><h3>기대 효과</h3>
+ <div class="ps" id="p7"><small>08 IMPACT</small><h3>기대 효과</h3>
   <div class="eff">
    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><b>지역 경제 활성화</b><small>지역 상권 매출 증대, 일자리 창출, 소상공인 참여 확대</small></div>
    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0113 0"/><circle cx="17" cy="9" r="2.8"/><path d="M16 14.2a5 5 0 016 4.8"/></svg><b>관광객 체류시간 증가</b><small>낮(뮤지엄)부터 밤(야시장)까지 머무는 용산 관광</small></div>
@@ -540,7 +595,7 @@ var IMG={"v_night": "data:image/webp;base64,UklGRu4VAABXRUJQVlA4IOIVAADwRwCdASqE
 function $(i){return document.getElementById(i)}
 function Q(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-var ICS={"map": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z\"/><path d=\"M9 4v14M15 6v14\"/></svg>", "food": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 11h16a8 8 0 01-16 0z\"/><path d=\"M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3\"/><path d=\"M3 21h18\"/></svg>", "mic": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"9\" y=\"3\" width=\"6\" height=\"11\" rx=\"3\"/><path d=\"M5 11a7 7 0 0014 0M12 18v3M8 21h8\"/></svg>", "bus": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"3\" width=\"16\" height=\"15\" rx=\"3\"/><path d=\"M4 11h16M8 21v-3M16 21v-3\"/><circle cx=\"8\" cy=\"14.5\" r=\".9\" fill=\"currentColor\"/><circle cx=\"16\" cy=\"14.5\" r=\".9\" fill=\"currentColor\"/></svg>", "route": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"6\" cy=\"18\" r=\"2.5\"/><circle cx=\"18\" cy=\"6\" r=\"2.5\"/><path d=\"M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5\"/></svg>", "stamp": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 3h6l-1 7h3a3 3 0 013 3v2H4v-2a3 3 0 013-3h3z\"/><path d=\"M5 19h14\"/></svg>", "shield": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"/><path d=\"M9 12l2 2 4-4\"/></svg>", "pin": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z\"/><circle cx=\"12\" cy=\"9.5\" r=\"2.5\"/></svg>", "ticket": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 00-2 2H5a2 2 0 00-2-2v-2a2 2 0 000-4z\"/><path d=\"M14 6v12\" stroke-dasharray=\"2 2.5\"/></svg>", "globe": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18\"/></svg>", "users": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20a6.5 6.5 0 0113 0\"/><circle cx=\"17\" cy=\"9\" r=\"2.8\"/><path d=\"M16 14.2a5 5 0 016 4.8\"/></svg>", "bag": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 8h14l-1 13H6z\"/><path d=\"M9 8V6a3 3 0 016 0v2\"/></svg>", "camera": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 8h3l2-3h6l2 3h3v11H4z\"/><circle cx=\"12\" cy=\"13\" r=\"3.5\"/></svg>", "chart": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 20V10M10 20V4M16 20v-7M22 20H2\"/></svg>", "coin": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"7\" rx=\"7\" ry=\"3\"/><path d=\"M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5\"/></svg>", "leaf": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 19C5 10 10 5 20 4c0 10-5 15-14 15z\"/><path d=\"M5 19l8-8\"/></svg>", "share": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"18\" cy=\"5\" r=\"2.5\"/><circle cx=\"6\" cy=\"12\" r=\"2.5\"/><circle cx=\"18\" cy=\"19\" r=\"2.5\"/><path d=\"M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4\"/></svg>", "moon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z\"/></svg>", "museum": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18M4 18h16\"/></svg>", "flag": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V4M5 4h11l-2 4 2 4H5\"/></svg>", "art": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3a9 9 0 100 18c1.5 0 2-1 2-2s-1-1.5-1-2.5 1-1.5 2-1.5h2a4 4 0 004-4c0-4.4-4-8-9-8z\"/><circle cx=\"7.5\" cy=\"11\" r=\"1.2\" fill=\"currentColor\"/><circle cx=\"10\" cy=\"7\" r=\"1.2\" fill=\"currentColor\"/><circle cx=\"15\" cy=\"7.5\" r=\"1.2\" fill=\"currentColor\"/></svg>", "heart": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 20s-8-4.8-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 9c0 6.2-8 11-8 11z\"/></svg>", "bell": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 16V11a6 6 0 10-12 0v5l-2 2h16z\"/><path d=\"M10 21h4\"/></svg>", "info": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 11v6M12 7.5v.5\"/></svg>", "med": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"6\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M9 6V4h6v2M12 10v6M9 13h6\"/></svg>", "wc": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"7\" cy=\"5\" r=\"2\"/><circle cx=\"17\" cy=\"5\" r=\"2\"/><path d=\"M5 9h4l-.5 6H8v6M6 15v6M15 9h4l1.5 7h-2v5M15.5 16h-1l1-7\"/></svg>", "lost": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 8h14l-1 12H6z\"/><path d=\"M12 12v.01M10 11a2 2 0 113 1.7c-.6.4-1 .8-1 1.3\"/></svg>", "down": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"/></svg>", "reset": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12a8 8 0 108-8M4 4v5h5\"/></svg>"};
+var ICS={"map": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z\"/><path d=\"M9 4v14M15 6v14\"/></svg>", "food": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 11h16a8 8 0 01-16 0z\"/><path d=\"M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3\"/><path d=\"M3 21h18\"/></svg>", "mic": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"9\" y=\"3\" width=\"6\" height=\"11\" rx=\"3\"/><path d=\"M5 11a7 7 0 0014 0M12 18v3M8 21h8\"/></svg>", "bus": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"3\" width=\"16\" height=\"15\" rx=\"3\"/><path d=\"M4 11h16M8 21v-3M16 21v-3\"/><circle cx=\"8\" cy=\"14.5\" r=\".9\" fill=\"currentColor\"/><circle cx=\"16\" cy=\"14.5\" r=\".9\" fill=\"currentColor\"/></svg>", "route": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"6\" cy=\"18\" r=\"2.5\"/><circle cx=\"18\" cy=\"6\" r=\"2.5\"/><path d=\"M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5\"/></svg>", "stamp": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 3h6l-1 7h3a3 3 0 013 3v2H4v-2a3 3 0 013-3h3z\"/><path d=\"M5 19h14\"/></svg>", "shield": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"/><path d=\"M9 12l2 2 4-4\"/></svg>", "pin": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z\"/><circle cx=\"12\" cy=\"9.5\" r=\"2.5\"/></svg>", "ticket": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 8a2 2 0 002-2h14a2 2 0 002 2v2a2 2 0 000 4v2a2 2 0 00-2 2H5a2 2 0 00-2-2v-2a2 2 0 000-4z\"/><path d=\"M14 6v12\" stroke-dasharray=\"2 2.5\"/></svg>", "globe": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18\"/></svg>", "users": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20a6.5 6.5 0 0113 0\"/><circle cx=\"17\" cy=\"9\" r=\"2.8\"/><path d=\"M16 14.2a5 5 0 016 4.8\"/></svg>", "bag": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 8h14l-1 13H6z\"/><path d=\"M9 8V6a3 3 0 016 0v2\"/></svg>", "camera": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 8h3l2-3h6l2 3h3v11H4z\"/><circle cx=\"12\" cy=\"13\" r=\"3.5\"/></svg>", "chart": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 20V10M10 20V4M16 20v-7M22 20H2\"/></svg>", "coin": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"7\" rx=\"7\" ry=\"3\"/><path d=\"M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5\"/></svg>", "leaf": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 19C5 10 10 5 20 4c0 10-5 15-14 15z\"/><path d=\"M5 19l8-8\"/></svg>", "share": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"18\" cy=\"5\" r=\"2.5\"/><circle cx=\"6\" cy=\"12\" r=\"2.5\"/><circle cx=\"18\" cy=\"19\" r=\"2.5\"/><path d=\"M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4\"/></svg>", "moon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z\"/></svg>", "museum": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 9l9-5 9 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18M4 18h16\"/></svg>", "flag": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V4M5 4h11l-2 4 2 4H5\"/></svg>", "art": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3a9 9 0 100 18c1.5 0 2-1 2-2s-1-1.5-1-2.5 1-1.5 2-1.5h2a4 4 0 004-4c0-4.4-4-8-9-8z\"/><circle cx=\"7.5\" cy=\"11\" r=\"1.2\" fill=\"currentColor\"/><circle cx=\"10\" cy=\"7\" r=\"1.2\" fill=\"currentColor\"/><circle cx=\"15\" cy=\"7.5\" r=\"1.2\" fill=\"currentColor\"/></svg>", "heart": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 20s-8-4.8-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 9c0 6.2-8 11-8 11z\"/></svg>", "bell": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 16V11a6 6 0 10-12 0v5l-2 2h16z\"/><path d=\"M10 21h4\"/></svg>", "info": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 11v6M12 7.5v.5\"/></svg>", "med": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"6\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M9 6V4h6v2M12 10v6M9 13h6\"/></svg>", "wc": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"7\" cy=\"5\" r=\"2\"/><circle cx=\"17\" cy=\"5\" r=\"2\"/><path d=\"M5 9h4l-.5 6H8v6M6 15v6M15 9h4l1.5 7h-2v5M15.5 16h-1l1-7\"/></svg>", "lost": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 8h14l-1 12H6z\"/><path d=\"M12 12v.01M10 11a2 2 0 113 1.7c-.6.4-1 .8-1 1.3\"/></svg>", "boat": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 14h18l-2.5 4h-13z\"/><path d=\"M6 14V9h12v5M9.5 9V6h5v3\"/><path d=\"M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1\"/></svg>", "down": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4v11M7 10l5 5 5-5M5 20h14\"/></svg>", "reset": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12a8 8 0 108-8M4 4v5h5\"/></svg>"};
 function ic(n){return ICS[n]||''}
 Q('img[data-i]').forEach(function(e){e.src=IMG[e.dataset.i]});
 var tt;function toast(m){var t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('on')},2200)}
@@ -564,7 +619,7 @@ var ZONES={
  E:{n:'달빛 포토존 · 휴식',s:'분수와 야경이 보이는 쉼터',img:'v_rest',d:'반포대교 달빛무지개분수(시즌 운영)와 서울 야경이 한눈에 보이는 포토존과 빈백 휴식 공간.',
   b:[['달빛 포토존','분수·야경 뷰 포인트'],['빈백 라운지','휴식 · 한강 감상'],['한강 피크닉 존','돗자리 대여']]}
 };
-var FAC=[['info','종합안내소','남단 입구'],['med','의무실','중앙 · 간호사 상주'],['wc','화장실','남·북단'],['bus','셔틀 승차장','반포한강공원'],['globe','통역 데스크','EN · 中 · 日'],['lost','분실물 센터','종합안내소']];
+var FAC=[['info','종합안내소','남단 입구'],['med','의무실','중앙 · 간호사 상주'],['wc','화장실','남·북단'],['bus','셔틀 승차장','반포한강공원'],['globe','통역 데스크','EN · 中 · 日'],['lost','분실물 센터','종합안내소'],['pin','오시는 길','지하철·버스·한강버스']];
 var STOPS_MU=[
  {k:'jam',n:'잠수교 야시장 승차장',t:'13:00',dur:'출발',c:'#f5c35b',ic:'moon',s:'반포한강공원 셔틀 승차장에서 출발',tg:['승차'],d:'반포한강공원 잠수교 남단 셔틀 승차장에서 출발합니다. 탑승권 QR을 보여주세요.'},
  {k:'nm',n:'국립중앙박물관',t:'13:25',dur:'70분',c:'#5b8cff',ic:'museum',s:'우리 역사와 문화를 한눈에, 사유의 방',tg:['역사','상설전시','용산가족공원'],d:'우리나라 최대 규모의 박물관. 반가사유상 두 점을 모신 「사유의 방」과 상설전시관을 둘러봅니다.'},
@@ -573,13 +628,41 @@ var STOPS_MU=[
  {k:'bts',n:'BTS 체험관',t:'17:05',dur:'40분',c:'#9b6bff',ic:'mic',s:'K-POP을 대표하는 BTS 테마 체험',tg:['K-POP','체험','협의 예정'],d:'K-POP을 대표하는 BTS 테마 체험 공간. 운영 장소·프로그램은 관계사와 협의 후 확정합니다.'},
  {k:'jam2',n:'잠수교 야시장 도착',t:'18:00',dur:'하차',c:'#f5c35b',ic:'moon',s:'해 질 무렵 도착 · 야시장 OPEN',tg:['하차','웰컴 쿠폰'],d:'해 질 무렵 잠수교에 도착해 야시장 오픈과 함께 입장합니다. 탑승객 웰컴 쿠폰(시안)이 지급돼요.'}
 ];
-var BELT=[
- {k:'jam',n:'잠수교 야시장',img:'c_jam',s:'한강의 밤, K-컬처의 시작',d:'벨트의 출발점. K-푸드·K-POP·K-패션·K-뷰티가 한강 위에 모여요.',tg:['K-푸드','버스킹','달빛분수']},
- {k:'ys',n:'용산',img:'c_ys',s:'K-콘텐츠 · 쇼핑 · 문화',d:'용리단길 맛집, 아이파크몰, 뮤지엄 거리까지. 낮의 문화가 밤의 상권으로 이어져요.',tg:['용리단길','아이파크몰','뮤지엄']},
- {k:'it',n:'이태원',img:'c_it',s:'글로벌 문화 · 맛집 · 패션',d:'세계음식거리와 루프탑, 빈티지 패션. 외국인 관광객이 가장 먼저 찾는 글로벌 거리.',tg:['세계음식','루프탑','빈티지']},
- {k:'md',n:'명동',img:'c_md',s:'K-뷰티 · 쇼핑 · 남산',d:'K-뷰티 로드숍과 길거리 음식, 남산서울타워로 이어지는 외국인 관광 1번지.',tg:['K-뷰티','길거리 음식','남산'],nw:1},
- {k:'dd',n:'동대문',img:'c_dd',s:'패션 · 뷰티 · 쇼핑 허브',d:'DDP와 심야 패션 상가. 밤이 깊을수록 붐비는 서울의 심야 쇼핑 허브.',tg:['DDP','심야 쇼핑','패션']}
-];
+var YS={
+ jam:{n:'잠수교 야시장',img:'c_jam',s:'Y축의 출발점 · 한강의 밤',d:'Y축 관광벨트의 출발점이자 종착점. K-푸드·K-POP·K-패션·K-뷰티가 한강 위에 모여요.',tg:['야시장','한강버스 선착장(안)','달빛분수']},
+ it:{n:'이태원',img:'c_it',s:'글로벌 문화 · 맛집 · 패션',d:'세계음식거리와 루프탑, 빈티지 패션. 외국인 관광객이 가장 먼저 찾는 글로벌 거리.',tg:['세계음식','루프탑','빈티지']},
+ ns:{n:'남산',img:'c_md',s:'남산서울타워 · 서울 야경 전망',d:'남산서울타워와 순환로 산책길. 서울 야경을 한눈에 내려다보는 Y축의 전망대.',tg:['N서울타워','야경','산책']},
+ md:{n:'명동',ic:'bag',c:'#ff7bb5',s:'K-뷰티 · 쇼핑 · 길거리 음식',d:'K-뷰티 로드숍과 길거리 음식, 외국인 관광 1번지. 1코스와 2코스가 갈라지는 Y축 분기점.',tg:['K-뷰티','길거리 음식','분기점']},
+ dd:{n:'동대문',img:'c_dd',s:'DDP · 심야 패션 쇼핑',d:'DDP와 심야 패션 상가. 밤이 깊을수록 붐비는 서울의 심야 쇼핑 허브. 1코스 종점.',tg:['DDP','심야 쇼핑','1코스 종점']},
+ gh:{n:'광화문',ic:'museum',c:'#c9a46a',s:'경복궁 · 광화문광장 · 역사 중심',d:'경복궁과 광화문광장, 청계천 시작점. 서울의 역사와 오늘이 만나는 곳.',tg:['경복궁','광화문광장','청계천']},
+ sc:{n:'신촌',ic:'users',c:'#5b8cff',s:'대학가 · 청춘 문화',d:'연세로와 대학가 골목. 젊은 에너지와 거리 공연이 이어지는 청춘의 거리.',tg:['대학가','연세로','거리공연']},
+ hj:{n:'합정',ic:'mic',c:'#9b8cff',s:'홍대·합정 인디 음악 · 카페',d:'홍대·합정·망원으로 이어지는 인디 음악과 카페, 라이브 클럽 문화.',tg:['인디 음악','카페 거리','망원 인접']},
+ ds:{n:'당산',ic:'pin',c:'#43e0c2',s:'한강 연결 거점',d:'2코스 버스 구간의 마지막 정류장. 가까운 여의도 선착장으로 이동해 한강버스에 오릅니다.',tg:['버스 종점','여의도 환승']},
+ yd:{n:'여의도 선착장',ic:'boat',c:'#6cb8ff',s:'한강버스 승선 · 여의도 하선 가능',d:'한강버스를 타고 노을 진 한강을 따라 잠수교로 돌아갑니다. 여의도에서 내려 머물러도 돼요.',tg:['한강버스','여의도 잔류 가능','노을']}
+};
+var YC={1:{n:'1코스',r:['jam','it','ns','md','dd'],t:[0,15,30,45,70],m:['출발','버스','버스','버스','버스'],dur:'약 70분'},
+ 2:{n:'2코스',r:['jam','it','ns','md','gh','sc','hj','ds','yd','jam'],t:[0,15,30,45,65,85,100,115,130,170],m:['출발','버스','버스','버스','버스','버스','버스','버스','이동','한강버스'],dur:'약 3시간'}};
+var YP={jam:[170,262],it:[170,208],ns:[170,156],md:[170,104],dd:[292,52],gh:[104,46],sc:[44,98],hj:[36,160],ds:[62,214],yd:[112,262]};
+function ySvg(c){var P=YP;function L(a,b,col,w,op,dash){return '<path d="M'+P[a][0]+' '+P[a][1]+' L'+P[b][0]+' '+P[b][1]+'" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round" fill="none" opacity="'+op+'"'+(dash?' stroke-dasharray="7 6" class="yflow"':'')+'/>'}
+ var o1=c===2?.18:1,o2=c===1?.18:1,s='<svg viewBox="0 0 340 290" role="img" aria-label="잠수교 중심 Y축 관광벨트 노선도">';
+ s+='<path d="M0 250 C80 244 140 274 220 260 S320 248 340 254 L340 284 C260 290 160 272 80 286 S10 282 0 284Z" fill="#12366e" opacity=".75"/><text x="300" y="280" fill="rgba(160,200,255,.6)" font-size="12" font-weight="700" text-anchor="middle">한강</text>';
+ s+='<text x="250" y="190" fill="rgba(245,195,91,.10)" font-size="130" font-weight="900" text-anchor="middle">Y</text>';
+ s+=L('jam','it','#f5c35b',7,1)+L('it','ns','#f5c35b',7,1)+L('ns','md','#f5c35b',7,1);
+ s+=L('md','dd','#ff7bb5',6,o1);
+ s+=L('md','gh','#43e0c2',6,o2)+L('gh','sc','#43e0c2',6,o2)+L('sc','hj','#43e0c2',6,o2)+L('hj','ds','#43e0c2',6,o2)+L('ds','yd','#43e0c2',4,o2,1);
+ s+='<path d="M112 262 Q141 272 170 262" stroke="#9ad0ff" stroke-width="4" fill="none" stroke-dasharray="7 6" class="yflow" opacity="'+o2+'"/>';
+ if(c!==1)s+='<g opacity="'+o2+'"><circle r="5" fill="#fff"><animateMotion dur="3.5s" repeatCount="indefinite" path="M112 262 Q141 272 170 262"/></circle></g>';
+ var lab={jam:[24,5,'start'],it:[18,5,'start'],ns:[18,5,'start'],md:[18,5,'start'],dd:[0,30,'middle'],gh:[0,-20,'middle'],sc:[0,-20,'middle'],hj:[18,5,'start'],ds:[18,5,'start'],yd:[-20,5,'end']};
+ Object.keys(P).forEach(function(k){var p=P[k],y=YS[k],isJ=k==='jam',r=isJ?16:11,in1=YC[1].r.indexOf(k)>-1,in2=YC[2].r.indexOf(k)>-1,op=(c===1&&!in1)||(c===2&&!in2)?.3:1,
+  col=(isJ||k==='it'||k==='ns'||k==='md')?'#f5c35b':(k==='dd'?'#ff7bb5':(k==='yd'?'#9ad0ff':'#43e0c2')),l=lab[k];
+  s+='<g class="yn" data-ys="'+k+'" opacity="'+op+'"><circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(r+10)+'" fill="transparent"/><circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+r+'" fill="#0b1530" stroke="'+col+'" stroke-width="4"/>'+(isJ?'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="7" fill="#f5c35b"/>':'')+
+  '<text x="'+(p[0]+l[0])+'" y="'+(p[1]+l[1])+'" fill="#f3f5fb" font-size="'+(isJ?15:13)+'" font-weight="'+(isJ?900:700)+'" text-anchor="'+l[2]+'" paint-order="stroke" stroke="#0b1530" stroke-width="3">'+y.n.replace(' 야시장','').replace(' 선착장','')+'</text></g>'});
+ s+='<text x="'+(P.md[0]+18)+'" y="'+(P.md[1]+21)+'" fill="#8592b2" font-size="12">분기점</text></svg>';return s}
+var BK={mu:{n:'용산 뮤지엄 버스',times:['10:00','13:00'],lab:{'10:00':' → 15:00 도착','13:00':' → 18:00 도착'},price:5000,seats:40,t0:'13:00'},
+ y1:{n:'Y축 벨트 1코스',times:['18:00','19:00','20:00','21:00'],lab:{},price:3000,seats:45,t0:'18:00'},
+ y2:{n:'Y축 벨트 2코스',times:['15:00','16:00','17:00'],lab:{'15:00':' · 노을 귀환','16:00':' · 노을 귀환','17:00':' · 야경 귀환'},price:6000,seats:40,t0:'15:00'},
+ boat:{n:'한강버스 노을 크루즈',times:['16:30','17:30','19:00'],lab:{'16:30':' 노을','17:30':' 노을','19:00':' 야경'},price:3000,seats:150,t0:'16:30'}};
+
 var PROG=[
  ['18:00','달빛 오프닝 퍼레이드','잠수교 전 구간','E',60],
  ['18:30','K-푸드 라이브 쿠킹쇼','K-푸드 스트리트','A',40],
@@ -654,9 +737,9 @@ function homeLive(){var L=liveState();$('lv').classList.toggle('off',!L.open);$(
  var cb=$('tl').querySelector('.cur')||$('tl').querySelector('button:not(.past)');if(cb)$('tl').scrollLeft=Math.max(0,cb.offsetLeft-14)}
 function routeIcons(el){el.innerHTML='<svg class="bus" viewBox="0 0 30 26"><rect x="2" y="2" width="26" height="18" rx="4" fill="#ffd57a"/><rect x="5" y="5" width="20" height="7" rx="2" fill="#1b2c5e"/><circle cx="9" cy="21" r="3" fill="#0b1530"/><circle cx="21" cy="21" r="3" fill="#0b1530"/></svg>'+
  STOPS_MU.slice(1,5).map(function(s){return '<div><i style="background:'+s.c+'">'+ic(s.ic)+'</i><span>'+s.n.replace('국립중앙박물관','국립중앙<br>박물관').replace('전쟁기념관','전쟁<br>기념관').replace('리움미술관','리움<br>미술관').replace('BTS 체험관','BTS<br>체험관')+'</span></div>'}).join('')}
-function beltIcons(el){el.innerHTML='<span class="dot"></span>'+BELT.map(function(b){return '<button data-belt="'+b.k+'">'+(b.nw?'<span class="new">NEW</span>':'')+'<img src="'+IMG[b.img]+'" alt=""><span>'+b.n.replace(' 야시장','')+'</span></button>'}).join('')}
 R.home=function(){homeLive()};
-routeIcons($('hRt'));beltIcons($('hBl'));beltIcons($('pBl'));
+routeIcons($('hRt'));var HYC=0;function homeY(){$('hY').innerHTML=ySvg(HYC);Q('[data-yc]').forEach(function(b){b.classList.toggle('on',+b.dataset.yc===HYC)})}homeY();$('pY').innerHTML=ySvg(0);
+function pier(el){el.innerHTML=['마곡','망원','여의도','잠수교','잠원','옥수','뚝섬','잠실'].map(function(n){return n==='잠수교'?'<div class="me"><em>유치 제안</em><i></i><span>잠수교</span></div>':'<div><i></i><span>'+n+'</span></div>'}).join('')}pier($('hPier'));pier($('pPier'));
 /* hero sparkle */
 (function(){var c=$('fx'),x=c.getContext('2d'),P=[],W,H,dpr=Math.min(2,window.devicePixelRatio||1);
  function rs(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}rs();window.addEventListener('resize',rs);
@@ -698,45 +781,61 @@ function zoneSheet(z){var Zd=ZONES[z];
  '<div>'+Zd.b.map(function(b,i){var id=z+i;return '<div class="bt"><i style="background:'+ZC[z]+'">'+z+(i+1)+'</i><div><b>'+esc(b[0])+'</b><small>'+esc(b[1])+'</small></div><button class="lk'+(S.like[id]?' on':'')+'" data-like="'+id+'" aria-label="찜">'+ic('heart')+'</button></div>'}).join('')+'</div>'+
  '<div style="margin-top:14px">'+(S.stamps[z]?'<button class="btn l" disabled>✓ '+z+' 구역 스탬프 완료</button>':'<button class="btn" id="stB">'+ic('stamp')+'현장 QR로 스탬프 찍기</button>')+'</div><p class="nt" style="margin-top:8px;text-align:center">시안에서는 버튼을 누르면 바로 찍혀요. 실제 운영 시 부스 QR 인증.</p>',
  function(){var b=$('stB');if(b)b.onclick=function(){S.stamps[z]=Date.now();save();badge();toast(z+' 구역 스탬프 쾅! ('+Object.keys(S.stamps).length+'/5)');zoneSheet(z);if(cur==='map')R.map()}})}
-function facSheet(k){var f=FAC.filter(function(x){return x[0]===k})[0];if(!f)return;
- var D={info:'남단 입구 종합안내소에서 지도·프로그램 안내, 분실물 접수, 휠체어·유모차 대여를 도와드려요.',med:'중앙 구간 의무실에 간호사가 상주합니다. 응급 시 가까운 운영요원이나 119.',wc:'남단·북단 입구 쪽에 화장실이 있어요. 남단에는 수유실도 함께 운영(안).',bus:'반포한강공원 셔틀 승차장. 용산 뮤지엄 버스와 K-컬처 나이트 벨트가 여기서 출발해요.',globe:'영어·중국어·일본어 통역 데스크. Foreign visitors welcome!',lost:'분실물은 종합안내소에서 접수·보관합니다.'};
- sheet(f[1],'<p class="dsc">'+D[k]+'</p><dl class="kv"><dt>위치</dt><dd>'+f[2]+'</dd><dt>운영</dt><dd>야시장 운영 시간 동안</dd></dl>'+(k==='bus'?'<button class="btn" style="margin-top:16px" id="fB">K-투어 노선 보기</button>':''),function(){var b=$('fB');if(b)b.onclick=function(){swap(function(){go('tour','belt')})}})}
+function facSheet(k){if(k==='pin'){ACT.way();return}var f=FAC.filter(function(x){return x[0]===k})[0];if(!f)return;
+ var D={info:'남단 입구 종합안내소에서 지도·프로그램 안내, 분실물 접수, 휠체어·유모차 대여를 도와드려요.',med:'중앙 구간 의무실에 간호사가 상주합니다. 응급 시 가까운 운영요원이나 119.',wc:'남단·북단 입구 쪽에 화장실이 있어요. 남단에는 수유실도 함께 운영(안).',bus:'반포한강공원 셔틀 승차장. 용산 뮤지엄 버스와 Y축 관광벨트 셔틀이 여기서 출발해요.',globe:'영어·중국어·일본어 통역 데스크. Foreign visitors welcome!',lost:'분실물은 종합안내소에서 접수·보관합니다.'};
+ sheet(f[1],'<p class="dsc">'+D[k]+'</p><dl class="kv"><dt>위치</dt><dd>'+f[2]+'</dd><dt>운영</dt><dd>야시장 운영 시간 동안</dd></dl>'+(k==='bus'?'<button class="btn" style="margin-top:16px" id="fB">Y축 벨트 노선 보기</button>':''),function(){var b=$('fB');if(b)b.onclick=function(){swap(function(){go('tour','belt')})}})}
 
 /* ===== tour ===== */
-var TS='mu';
-R.tour=function(a){if(a==='mu'||a==='belt')TS=a;Q('[data-tseg]').forEach(function(b){b.classList.toggle('on',b.dataset.tseg===TS)});
+var TS='mu',YCS=1;
+R.tour=function(a){if(a==='belt')a='y';if(a==='mu'||a==='y'||a==='boat')TS=a;Q('[data-tseg]').forEach(function(b){b.classList.toggle('on',b.dataset.tseg===TS)});
+ function tags(t){return '<div class="tg">'+t.map(function(x){return '<span>'+esc(x)+'</span>'}).join('')+'</div>'}
  if(TS==='mu'){$('tourB').innerHTML='<div class="th"><small>낮에는 뮤지엄, 밤에는 야시장</small><h3>용산 뮤지엄 버스</h3><p>용산의 대표 문화시설 네 곳을 돌고, 해 질 무렵 잠수교 야시장에 내려드려요.</p><div class="inf"><div><small>운행(안)</small><b>금·토·일</b></div><div><small>소요</small><b>약 5시간</b></div><div><small>요금(안)</small><b>5,000원</b></div></div></div>'+
-  '<div class="stops">'+STOPS_MU.map(function(s,i){return '<button class="sp" data-stop="'+i+'"><i style="background:'+s.c+'">'+ic(s.ic)+'</i><div class="bx"><em>'+s.t+' · '+s.dur+'</em><b>'+esc(s.n)+'</b><small>'+esc(s.s)+'</small><div class="tg">'+s.tg.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div></div></button>'}).join('')+'</div>'+
-  '<div class="bkb"><button class="btn" data-act="book">'+ic('ticket')+'좌석 예약하기</button></div>'}
- else{$('tourB').innerHTML='<div class="th" style="background:linear-gradient(150deg,#0f3a52,#0f2150);border-color:rgba(67,224,194,.3)"><small>잠수교에서 시작하는 서울의 밤</small><h3>K-컬처 나이트 벨트</h3><p>잠수교 야시장 → 용산 → 이태원 → 명동 → 동대문을 잇는 야간 순환 셔틀.</p><div class="inf"><div><small>운행(안)</small><b>18~24시</b></div><div><small>배차</small><b>30분</b></div><div><small>요금(안)</small><b>1일권</b></div></div></div>'+
-  '<div class="stops bltour">'+BELT.map(function(b,i){return '<button class="sp" data-belt="'+b.k+'"><img src="'+IMG[b.img]+'" alt=""><div class="bx"><em>'+(i===0?'출발 · 18:00부터 30분마다':'+'+[0,15,30,50,70][i]+'분')+'</em><b>'+esc(b.n)+(b.nw?' <span class="new">NEW</span>':'')+'</b><small>'+esc(b.s)+'</small><div class="tg">'+b.tg.map(function(t){return '<span>'+esc(t)+'</span>'}).join('')+'</div></div></button>'}).join('')+
-  '<button class="sp"><i style="background:#f5c35b">'+ic('moon')+'</i><div class="bx"><em>+90분</em><b>잠수교 야시장 귀환</b><small>순환 노선 · 어느 정류장에서든 타고 내릴 수 있어요</small></div></button></div>'+
-  '<div class="bkb"><button class="btn" data-act="book" data-c="belt">'+ic('ticket')+'나이트 벨트 1일권 예약</button></div>'}};
+  '<div class="stops">'+STOPS_MU.map(function(s,i){return '<button class="sp" data-stop="'+i+'"><i style="background:'+s.c+'">'+ic(s.ic)+'</i><div class="bx"><em>'+s.t+' · '+s.dur+'</em><b>'+esc(s.n)+'</b><small>'+esc(s.s)+'</small>'+tags(s.tg)+'</div></button>'}).join('')+'</div>'+
+  '<div class="bkb"><button class="btn" data-act="book" data-c="mu">'+ic('ticket')+'좌석 예약하기</button></div>'}
+ else if(TS==='y'){var C=YC[YCS];
+  $('tourB').innerHTML='<div class="th" style="background:linear-gradient(150deg,#0f3a52,#0f2150);border-color:rgba(67,224,194,.3)"><small>잠수교를 중심으로 서울을 잇는</small><h3>Y축 관광벨트</h3><p>이태원·남산·명동까지 한 줄기로 올라가 동대문(1코스)과 광화문·신촌·합정·당산(2코스)으로 갈라져요. 2코스는 한강버스로 잠수교에 돌아와요.</p></div>'+
+  '<div class="ycs"><button data-ycs="1" class="'+(YCS===1?'on':'')+'">1코스 · 동대문</button><button data-ycs="2" class="'+(YCS===2?'on':'')+'">2코스 · 한강버스 귀환</button></div>'+
+  '<div class="ywt">'+ySvg(YCS)+'</div>'+
+  '<div class="inf" style="margin:12px 14px 0"><div><small>운행(안)</small><b>'+(YCS===1?'18~24시':'15~17시 출발')+'</b></div><div><small>소요</small><b>'+C.dur+'</b></div><div><small>요금(안)</small><b>'+BK['y'+YCS].price.toLocaleString()+'원</b></div></div>'+
+  '<div class="stops bltour">'+C.r.map(function(k,i){var y=YS[k],end=i>0&&i===C.r.length-1,md=C.m[i];
+   return '<button class="sp" data-ys="'+k+'">'+(y.img?'<img src="'+IMG[y.img]+'" alt="">':'<i style="background:'+y.c+'">'+ic(y.ic)+'</i>')+'<div class="bx"><em>'+(i===0?'출발':'+'+C.t[i]+'분')+(md==='한강버스'?'<span class="mode">한강버스</span>':md==='이동'?'<span class="mode" style="background:#43e0c2;color:#05261f">환승</span>':'')+'</em><b>'+esc(end?'잠수교 야시장 도착':y.n)+'</b><small>'+esc(end?'노을·야경을 보며 물길로 귀환 · 여의도에서 내려도 돼요':y.s)+'</small>'+(end?'':tags(y.tg))+'</div></button>'}).join('')+'</div>'+
+  '<div class="bkb"><button class="btn" data-act="book" data-c="y'+YCS+'">'+ic('ticket')+'Y축 벨트 '+C.n+' 예약</button></div>'}
+ else{$('tourB').innerHTML='<div class="th" style="background:linear-gradient(150deg,#4a2547,#14244f);border-color:rgba(255,178,122,.35)"><small>잠수교 한강버스 선착장 · 유치 제안</small><h3>물길로 오는 야시장</h3><p>잠수교 남단 또는 북단에 한강버스 선착장을 유치해, 노을 무렵 배를 타고 야시장에 도착하는 새로운 관광 동선을 만듭니다.</p></div>'+
+  '<div class="ywt" style="padding:34px 8px 14px;background:linear-gradient(150deg,#3a2350,#0f2150)"><div class="pier" id="tPier" style="margin-top:0"></div></div>'+
+  '<p class="nt" style="margin:8px 16px 0">현재 한강버스 선착장 7곳(마곡·망원·여의도·잠원·옥수·뚝섬·잠실) 중 여의도와 잠원 사이에 잠수교를 더하는 안이에요.</p>'+
+  '<div class="sec" style="margin-top:20px"><div class="st"><h3>선착장 위치(안)</h3></div></div>'+
+  '<div class="loc" style="margin-top:0"><div><b>남단 · 반포한강공원</b><small>세빛섬·달빛무지개분수 인접, 야시장 남측 입구와 바로 연결</small></div><div><b>북단 · 이촌·서빙고</b><small>용산 도심·뮤지엄 버스와 연계, 용산구 상권 유입</small></div></div>'+
+  '<div class="sec" style="margin-top:20px"><div class="st"><h3>운항 프로그램(안)</h3></div></div>'+
+  '<div class="pgm" style="margin-top:0"><button data-act="book" data-c="boat"><i style="background:linear-gradient(150deg,#ffb27a,#d9603b)">'+ic('moon')+'</i><div><b>노을 크루즈</b><small>여의도 → 잠수교 · 해 질 무렵 한강 위에서 노을을 보고 야시장 입장</small></div></button>'+
+  '<button data-act="book" data-c="boat"><i style="background:linear-gradient(150deg,#9b8cff,#4b3bc4)">'+ic('camera')+'</i><div><b>야경 운항</b><small>잠수교 출발 야간 운항 · 달빛무지개분수와 연계(시즌)</small></div></button>'+
+  '<button data-tseg="y" data-ycs2="2"><i style="background:linear-gradient(150deg,#58e6cb,#169c88)">'+ic('route')+'</i><div><b>Y축 2코스 귀환</b><small>당산·여의도에서 한강버스로 잠수교 복귀 · 여의도 잔류 가능</small></div></button></div>'+
+  '<div class="sec" style="margin-top:20px"><div class="st"><h3>기대 효과</h3></div><div class="eff" style="margin-top:0"><div>'+ic('boat')+'<b>한강버스 활성화</b><small>저녁 시간대 이용 수요 확대</small></div><div>'+ic('moon')+'<b>노을 관광</b><small>일몰 시간 한강 체류 관광</small></div><div>'+ic('camera')+'<b>야간 관광</b><small>야경 운항 · 야시장 연계</small></div><div>'+ic('chart')+'<b>상권 연계</b><small>선착장 → 야시장 → 용산 상권</small></div></div></div>'+
+  '<div class="bkb"><button class="btn" data-act="book" data-c="boat">'+ic('ticket')+'노을 크루즈 예약</button></div>';pier($('tPier'))}};
 function stopSheet(i){var s=STOPS_MU[i];sheet(s.n,'<div style="display:flex;gap:12px;align-items:center;margin-bottom:12px"><span style="width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:'+s.c+'">'+ic(s.ic)+'</span><div><b style="font-size:16px">'+s.t+' 도착 · '+s.dur+'</b><p class="nt">'+esc(s.s)+'</p></div></div><p class="dsc">'+esc(s.d)+'</p><div class="ptn" style="margin-top:12px">'+s.tg.map(function(t){return '<span class="chip">'+esc(t)+'</span>'}).join('')+'</div><button class="btn" id="sB" style="margin-top:18px">이 코스 예약하기</button>',function(){$('sB').onclick=function(){swap(function(){bookForm('mu')})}})}
-function beltSheet(k){var b=BELT.filter(function(x){return x.k===k})[0];sheet(b.n+(b.nw?' · NEW':''),'<div class="zh"><img src="'+IMG[b.img]+'" alt="" style="object-position:center"><p>'+esc(b.s)+'</p></div><p class="dsc">'+esc(b.d)+'</p><div class="ptn" style="margin-top:12px">'+b.tg.map(function(t){return '<span class="chip">'+esc(t)+'</span>'}).join('')+'</div><button class="btn" id="bB" style="margin-top:18px">나이트 벨트 노선 보기</button>',function(){$('bB').onclick=function(){swap(function(){go('tour','belt')})}})}
+function ySheet(k){var b=YS[k],in1=YC[1].r.indexOf(k)>-1,in2=YC[2].r.indexOf(k)>-1;sheet(b.n,(b.img?'<div class="zh"><img src="'+IMG[b.img]+'" alt=""><p>'+esc(b.s)+'</p></div>':'<div style="display:flex;gap:12px;align-items:center;margin-bottom:12px"><span style="flex:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:'+b.c+'">'+ic(b.ic)+'</span><b style="font-size:16px">'+esc(b.s)+'</b></div>')+'<p class="dsc">'+esc(b.d)+'</p><div class="ptn" style="margin-top:12px">'+b.tg.map(function(t){return '<span class="chip">'+esc(t)+'</span>'}).join('')+'</div><p class="nt" style="margin-top:12px">'+(in1&&in2?'1코스 · 2코스 공통 정류장':in1?'1코스 정류장':'2코스 정류장')+'</p><button class="btn" id="bB" style="margin-top:14px">Y축 벨트 노선 보기</button>',function(){$('bB').onclick=function(){YCS=in1?(cur==='tour'?YCS:1):2;if(in1&&in2&&cur!=='tour')YCS=1;swap(function(){if(cur==='tour'){TS='y';R.tour()}else go('tour','y')})}})}
 /* booking */
-function bookForm(c){c=c||'mu';var days=openDays(6),st={d:dk(days[0]),t:c==='mu'?'13:00':'18:00',n:2};
- var times=c==='mu'?['10:00','13:00']:['18:00','19:00','20:00','21:00'];var price=c==='mu'?5000:3000;
+function bookForm(c){if(c==='belt')c='y1';c=BK[c]?c:'mu';var K=BK[c],days=openDays(6),st={d:dk(days[0]),t:K.t0,n:2};
+ var times=K.times;var price=K.price;
  function taken(d,t){return S.bk.filter(function(b){return b.c===c&&b.d===d&&b.t===t}).reduce(function(a,b){return a+b.n},0)}
- sheet(c==='mu'?'용산 뮤지엄 버스 예약':'나이트 벨트 1일권',
+ sheet(K.n+' 예약',
  '<div class="fm"><div><label>날짜 (금·토·일 운행)</label><div class="ops" id="bD">'+days.map(function(d){return '<button data-v="'+dk(d)+'">'+dl(d)+'</button>'}).join('')+'</div></div>'+
- '<div><label>'+(c==='mu'?'출발 시간':'첫 탑승 시간')+'</label><div class="ops" id="bT">'+times.map(function(t){return '<button data-v="'+t+'">'+t+(c==='mu'?(t==='10:00'?' → 15:00 도착':' → 18:00 도착'):'')+'</button>'}).join('')+'</div><p class="nt" id="bR" style="margin-top:6px"></p></div>'+
+ '<div><label>'+(c==='boat'?'승선 시간':'출발 시간')+'</label><div class="ops" id="bT">'+times.map(function(t){return '<button data-v="'+t+'">'+t+(K.lab[t]||'')+'</button>'}).join('')+'</div><p class="nt" id="bR" style="margin-top:6px"></p></div>'+
  '<div><label>인원</label><div class="cnt"><button id="bM" aria-label="빼기">−</button><b id="bN2">2</b><button id="bP" aria-label="더하기">+</button></div></div>'+
  '<div><label for="bNm">예약자 이름</label><input id="bNm" maxlength="12" placeholder="이름" autocomplete="name" value="'+esc(S.nm||'')+'"></div>'+
  '<div><label for="bTl">휴대폰 번호</label><input id="bTl" inputmode="numeric" maxlength="13" placeholder="010-0000-0000" autocomplete="tel" value="'+esc(S.tl||'')+'"></div>'+
  '<div class="sum"><span>결제 예정 금액 (시안)</span><b id="bSum"></b></div>'+
  '<button class="btn" id="bGo">예약 확정</button><p class="nt">시안 화면이라 실제 결제·문자 발송은 되지 않고, 이 휴대폰에 탑승권이 저장돼요.</p></div>',
  function(){function past(d,t){return d===dk(now())&&mins(t)<=nowM()}
-  function fix(){if(past(st.d,st.t)){var ok=times.filter(function(t){return !past(st.d,t)});if(ok.length)st.t=ok[0];else{st.d=dk(days[1]);st.t=times[c==='mu'?1:0]}}}
+  function fix(){if(past(st.d,st.t)){var ok=times.filter(function(t){return !past(st.d,t)});if(ok.length)st.t=ok[0];else{st.d=dk(days[1]);st.t=K.t0}}}
   function ui(){fix();Q('#bT button').forEach(function(b){b.disabled=past(st.d,b.dataset.v)});Q('#bD button').forEach(function(b){b.disabled=times.every(function(t){return past(b.dataset.v,t)})});Q('#bD button').forEach(function(b){b.classList.toggle('on',b.dataset.v===st.d)});Q('#bT button').forEach(function(b){b.classList.toggle('on',b.dataset.v===st.t)});
-   var left=(c==='mu'?40:45)-taken(st.d,st.t)-((st.d.charCodeAt(9)+st.t.charCodeAt(1))%17);$('bR').textContent='남은 좌석 '+Math.max(0,left)+'석 (시안)';
+   var left=K.seats-taken(st.d,st.t)-((st.d.charCodeAt(9)+st.t.charCodeAt(1))%17);$('bR').textContent='남은 좌석 '+Math.max(0,left)+'석 (시안)';
    $('bN2').textContent=st.n;$('bSum').textContent=(price*st.n).toLocaleString()+'원'}
   Q('#bD button').forEach(function(b){b.onclick=function(){st.d=b.dataset.v;ui()}});Q('#bT button').forEach(function(b){b.onclick=function(){st.t=b.dataset.v;ui()}});
   $('bM').onclick=function(){if(st.n>1){st.n--;ui()}};$('bP').onclick=function(){if(st.n<8){st.n++;ui()}else toast('한 번에 8명까지 예약할 수 있어요')};
   $('bTl').oninput=function(){var v=this.value.replace(/\D/g,'').slice(0,11);this.value=v.length>7?v.slice(0,3)+'-'+v.slice(3,v.length-4)+'-'+v.slice(-4):v.length>3?v.slice(0,3)+'-'+v.slice(3):v};
   $('bGo').onclick=function(){var nm=$('bNm').value.trim(),tl=$('bTl').value.replace(/\D/g,'');if(!nm){toast('예약자 이름을 적어 주세요');$('bNm').focus();return}if(!/^01\d{8,9}$/.test(tl)){toast('휴대폰 번호를 확인해 주세요');$('bTl').focus();return}
    if(past(st.d,st.t)){toast('이미 출발한 시간이에요');ui();return}S.nm=nm;S.tl=$('bTl').value;var b={id:'JS'+Date.now().toString(36).toUpperCase().slice(-6),c:c,d:st.d,t:st.t,n:st.n,nm:nm,at:Date.now()};S.bk.unshift(b);save();badge();
-   sheet('예약 완료','<div style="text-align:center;padding:6px 0 4px"><div style="font-size:44px">🎫</div><p style="font-size:18px;font-weight:900;margin-top:6px">'+(c==='mu'?'용산 뮤지엄 버스':'나이트 벨트 1일권')+'</p><p class="dsc" style="margin-top:4px">'+dl(new Date(st.d+'T00:00:00'))+' '+st.t+' · '+st.n+'명<br>예약번호 <b style="color:var(--gold)">'+b.id+'</b></p></div><button class="btn" id="tkB" style="margin-top:16px">내 탑승권 보기</button>',function(){$('tkB').onclick=function(){swap(function(){go('my')})}})};
+   sheet('예약 완료','<div style="text-align:center;padding:6px 0 4px"><div style="font-size:44px">🎫</div><p style="font-size:18px;font-weight:900;margin-top:6px">'+K.n+'</p><p class="dsc" style="margin-top:4px">'+dl(new Date(st.d+'T00:00:00'))+' '+st.t+' · '+st.n+'명<br>예약번호 <b style="color:var(--gold)">'+b.id+'</b></p></div><button class="btn" id="tkB" style="margin-top:16px">내 탑승권 보기</button>',function(){$('tkB').onclick=function(){swap(function(){go('my')})}})};
   ui()})}
 
 /* ===== program ===== */
@@ -773,7 +872,7 @@ R.my=function(){var n=Object.keys(S.stamps).length,done=n>=5;
  var h='<div class="card sb"><h4>4K 스탬프 투어</h4><small>5개 구역 스탬프를 모으면 야시장 쿠폰을 드려요</small><div class="stp">'+['A','B','C','D','E'].map(function(z){var on=S.stamps[z];return '<div class="'+(on?'on':'')+'" data-zone="'+z+'" role="button"><i style="'+(on?'background:'+ZC[z]:'')+'">'+(on?'✓':z)+'</i>'+ZONES[z].n.split(' ')[0].replace('달빛','포토존')+'</div>'}).join('')+'</div>'+
  '<div class="cpn'+(done?'':' off')+'">'+ic('coin')+'<div><b>5,000원 쿠폰</b><small>'+(done?'종합안내소에서 이 화면을 보여주세요':'스탬프 '+n+'/5 · '+(5-n)+'개 남았어요')+'</small></div></div></div>';
  h+='<div class="sec" style="margin-top:22px"><div class="st"><h3>내 탑승권</h3><small>'+S.bk.length+'건</small></div></div>';
- h+=S.bk.length?S.bk.map(function(b){return '<div class="tk"><div class="l"><small>'+(b.c==='mu'?'용산 뮤지엄 버스':'K-컬처 나이트 벨트')+'</small><b>'+dl(new Date(b.d+'T00:00:00'))+' '+b.t+'</b><p>'+esc(b.nm)+' · '+b.n+'명 · '+b.id+'</p><button class="chip" data-cx="'+b.id+'" style="margin-top:8px">예약 취소</button></div><div class="r"><canvas data-qr="'+b.id+'" width="70" height="70"></canvas><small>탑승 QR</small></div></div>'}).join(''):'<div class="emp">아직 예약한 탑승권이 없어요.<br><button class="btn" data-act="book" style="margin-top:12px">용산 뮤지엄 버스 예약</button></div>';
+ h+=S.bk.length?S.bk.map(function(b){return '<div class="tk"><div class="l"><small>'+(BK[b.c]||BK.mu).n+'</small><b>'+dl(new Date(b.d+'T00:00:00'))+' '+b.t+'</b><p>'+esc(b.nm)+' · '+b.n+'명 · '+b.id+'</p><button class="chip" data-cx="'+b.id+'" style="margin-top:8px">예약 취소</button></div><div class="r"><canvas data-qr="'+b.id+'" width="70" height="70"></canvas><small>탑승 QR</small></div></div>'}).join(''):'<div class="emp">아직 예약한 탑승권이 없어요.<br><button class="btn" data-act="book" style="margin-top:12px">용산 뮤지엄 버스 예약</button></div>';
  h+='<div class="card ml"><button data-go="prog">'+ic('bell')+'공연 알림<span>'+Object.keys(S.al).length+'개</span></button><button data-act="install">'+ic('down')+'앱으로 설치하기<span>홈 화면에 추가</span></button><button data-act="reset">'+ic('reset')+'시안 데이터 초기화</button></div>';
  $('v-my').innerHTML=h;Q('canvas[data-qr]').forEach(qr)};
 function qr(c){var x=c.getContext('2d'),id=c.dataset.qr,n=21,s=70/n,h=0;for(var i=0;i<id.length;i++)h=(h*31+id.charCodeAt(i))>>>0;
@@ -786,21 +885,23 @@ var dPrompt=null;window.addEventListener('beforeinstallprompt',function(e){e.pre
 var ACT={
  book:function(d){bookForm(d.c||'mu')},
  safety:function(){sheet('안전·편의 안내','<div class="zh"><img src="'+IMG.safe+'" alt=""><p>서울시·용산구·경찰·소방·의료기관·운영사가 함께하는 다층 안전관리</p></div><div>'+[['s_crowd','인파 관리','입·출구 분리, 일방통행, 혼잡도 실시간 표시'],['s_119','응급 대응','중앙 의무실 · 119 상시 연계'],['s_rain','기상 대응','한강 수위·기상 악화 시 운영 중단 안내'],['s_traffic','교통 안내','차량 통제 구간 · 대중교통·셔틀 이용']].map(function(x){return '<div class="bt"><img src="'+IMG[x[0]]+'" alt="" style="width:64px;height:44px;border-radius:10px;object-fit:cover;flex:none"><div><b>'+x[1]+'</b><small>'+x[2]+'</small></div></div>'}).join('')+'</div><button class="btn l" id="sfM" style="margin-top:14px">편의시설 지도 보기</button>',function(){$('sfM').onclick=function(){swap(function(){go('map')})}})},
- way:function(){sheet('오시는 길','<p class="dsc">잠수교 보행 구간 (반포대교 하층) · 서울 서초구 반포동 ↔ 용산구 서빙고동</p><div>'+[['지하철','3·7·9호선 고속터미널역 → 반포한강공원 도보 약 15분'],['버스','반포한강공원·세빛섬 정류장 하차'],['셔틀','K-컬처 나이트 벨트 · 용산 뮤지엄 버스'],['자전거','따릉이 반포한강공원 대여소']].map(function(x){return '<div class="bt"><i style="background:var(--card2);color:var(--gold);width:56px">'+x[0]+'</i><div><small style="color:var(--ink);font-size:14px">'+x[1]+'</small></div></div>'}).join('')+'</div><p class="nt" style="margin-top:10px">운영일에는 잠수교 차량 통행이 통제돼요(안). 대중교통을 이용해 주세요.</p>')},
+ way:function(){sheet('오시는 길','<p class="dsc">잠수교 보행 구간 (반포대교 하층) · 서울 서초구 반포동 ↔ 용산구 서빙고동</p><div>'+[['지하철','3·7·9호선 고속터미널역 → 반포한강공원 도보 약 15분'],['버스','반포한강공원·세빛섬 정류장 하차'],['셔틀','Y축 관광벨트 · 용산 뮤지엄 버스'],['한강버스','잠수교 선착장 (유치 제안) · 현재는 여의도·잠원 선착장'],['자전거','따릉이 반포한강공원 대여소']].map(function(x){return '<div class="bt"><i style="background:var(--card2);color:var(--gold);width:56px">'+x[0]+'</i><div><small style="color:var(--ink);font-size:14px">'+x[1]+'</small></div></div>'}).join('')+'</div><p class="nt" style="margin-top:10px">운영일에는 잠수교 차량 통행이 통제돼요(안). 대중교통을 이용해 주세요.</p>')},
  foreign:function(){sheet('Foreign Visitor Welcome','<p class="dsc">Welcome to Jamsugyo Night Market! Interpretation desk at the south entrance (EN · 中文 · 日本語).<br><br>欢迎来到潜水桥夜市！<br>潜水橋ナイトマーケットへようこそ！</p>')},
  install:function(){if(dPrompt){dPrompt.prompt();dPrompt=null;return}var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);sheet('앱으로 설치하기','<div class="card" style="padding:14px"><b>'+(ios?'아이폰 · 사파리':'안드로이드 · 크롬/삼성인터넷')+'</b><p class="dsc" style="margin-top:4px">'+(ios?'아래쪽 공유 버튼(□↑) → 홈 화면에 추가':'메뉴 ⋮ / ≡ → 홈 화면에 추가 또는 앱 설치')+'</p></div><p class="nt" style="margin-top:10px">홈 화면 아이콘으로 열면 주소창 없이 앱처럼 전체 화면으로 열려요.</p>')},
  reset:function(){sheet('시안 데이터 초기화','<p class="dsc">스탬프·탑승권·알림을 모두 지울까요?</p><button class="btn" id="rsY" style="margin-top:16px">모두 지우기</button>',function(){$('rsY').onclick=function(){S={stamps:{},bk:[],al:{},like:{}};save();badge();closeL();R.my();toast('초기화했어요')}})},
  shareP:function(){var u=location.href.split('#')[0];if(navigator.share){navigator.share({title:'잠수교 야시장 상권 조성 제안서',text:'세계가 찾는 잠수교 야시장 — 제안서 앱',url:u}).catch(function(){})}else{try{navigator.clipboard.writeText(u);toast('링크를 복사했어요')}catch(e){toast(u)}}}
 };
-document.addEventListener('click',function(e){var t=e.target.closest('[data-go],[data-tab],[data-zone],[data-fac],[data-tour],[data-tseg],[data-stop],[data-belt],[data-act],[data-like],[data-al],[data-alx],[data-pd],[data-prog],[data-to],[data-pg],[data-cx]');if(!t)return;var d=t.dataset;
+document.addEventListener('click',function(e){var t=e.target.closest('[data-go],[data-tab],[data-zone],[data-fac],[data-tour],[data-tseg],[data-stop],[data-ys],[data-yc],[data-ycs],[data-act],[data-like],[data-al],[data-alx],[data-pd],[data-prog],[data-to],[data-pg],[data-cx]');if(!t)return;var d=t.dataset;
  if(d.tab){go(d.tab);return}
  if(d.go){swap(function(){go(d.go)});return}
  if(d.zone){if(cur==='map'||cur==='my'){zoneSheet(d.zone)}else{go('map',d.zone)}return}
  if(d.fac){facSheet(d.fac);return}
- if(d.tour){swap(function(){if(cur==='tour'){TS=d.tour;R.tour()}else go('tour',d.tour)});return}
- if(d.tseg){TS=d.tseg;R.tour();return}
+ if(d.tour){if(d.ycs2)YCS=2;swap(function(){if(cur==='tour'){TS=d.tour;R.tour()}else go('tour',d.tour)});return}
+ if(d.tseg){if(d.ycs2)YCS=2;TS=d.tseg;R.tour();$('mn').scrollTop=0;return}
  if(d.stop!==undefined){stopSheet(+d.stop);return}
- if(d.belt){beltSheet(d.belt);return}
+ if(d.ys){ySheet(d.ys);return}
+ if(d.yc){HYC=HYC===+d.yc?0:+d.yc;homeY();return}
+ if(d.ycs){YCS=+d.ycs;R.tour();return}
  if(d.act&&ACT[d.act]){swap(function(){ACT[d.act](d)});return}
  if(d.like){S.like[d.like]=!S.like[d.like];if(!S.like[d.like])delete S.like[d.like];save();t.classList.toggle('on');toast(S.like[d.like]?'찜했어요':'찜을 풀었어요');return}
  if(d.al){if(S.al[d.al])delete S.al[d.al];else S.al[d.al]=1;save();badge();t.classList.toggle('on');toast(S.al[d.al]?'공연 10분 전에 알려드릴게요':'알림을 껐어요');return}
