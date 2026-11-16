@@ -456,7 +456,7 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
   <img data-i="hero" alt="불빛이 켜진 잠수교 위를 걷는 야시장 방문객들">
   <canvas id="fx" aria-hidden="true"></canvas>
   <div class="hc">
-   <div class="live" id="lv"><i></i><span id="lvT">오늘 밤 18:00 OPEN</span></div>
+   <div class="live" id="lv"><i></i><span id="lvT">오늘 15:00 OPEN</span></div>
    <span class="sc">세계가 찾는</span>
    <h2>한강 위, 서울의 밤<br>잠수교 야시장</h2>
    <div class="hst">
@@ -528,7 +528,7 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 
  <div class="sec"><button class="pp" data-go="prop"><img data-i="pg_poster" alt="잠수교 야시장 상권 조성 제안서 표지"><div><small>용산구청 귀중 · 2026</small><b>잠수교 야시장<br>상권 조성 제안서</b><p>비전 · Y축 관광벨트 · 한강버스 · 뮤지엄 버스 · 안전 · 예산 50억 ›</p></div></button></div>
 
- <div class="foot"><b>잠수교 야시장 (제안 시안)</b><br>운영(안) 매주 금·토·일 18:00~24:00 · 잠수교 보행 구간<br>Y축 관광벨트 · 한강버스 잠수교 선착장(유치 제안)<br>제안 (주)한강의기적 · 화면의 일정·요금·인원은 시안용 예시입니다.</div>
+ <div class="foot"><b>잠수교 야시장 (제안 시안)</b><br>운영(안) 365일 매일 15:00~24:00 · 잠수교 보행 구간<br>Y축 관광벨트 · 한강버스 잠수교 선착장(유치 제안)<br>제안 (주)한강의기적 · 화면의 일정·요금·인원은 시안용 예시입니다.</div>
 </section>
 
 <!-- MAP -->
@@ -709,13 +709,16 @@ function ySvg(c){var P=YP;function L(a,b,col,w,op,dash){return '<path d="M'+P[a]
 function every(h0,h1){var r=[];for(var m=h0*60;m<=h1*60;m+=15)r.push(pad(Math.floor(m/60))+':'+pad(m%60));return r}
 function plus(t,mn){var m=mins(t)+mn;return pad(Math.floor(m/60))+':'+pad(m%60)}
 var BK={mu:{n:'용산 뮤지엄 버스',times:every(10,13),lab:{},arr:300,price:7000,seats:40,t0:'13:00'},
- y1:{n:'Y축 관광버스 1코스',times:every(18,21),lab:{},price:8000,seats:45,t0:'18:00'},
+ y1:{n:'Y축 관광버스 1코스',times:['15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'],lab:{},price:8000,seats:45,t0:'18:00'},
  y2:{n:'Y축 관광버스 2코스',times:every(15,17),lab:{},arr:170,price:9000,seats:40,t0:'15:00'},
  boat:{n:'한강버스 노을 크루즈',times:['16:30','17:30','19:00'],lab:{'16:30':' 노을','17:30':' 노을','19:00':' 야경'},price:3000,seats:150,t0:'16:30'}};
 BK.mu.times.forEach(function(t){BK.mu.lab[t]=' → '+plus(t,300)});BK.y2.times.forEach(function(t){BK.y2.lab[t]=' → '+plus(t,170)});
 
 var PROG=[
- ['18:00','달빛 오프닝 퍼레이드','잠수교 전 구간','E',60],
+ ['15:00','야시장 오픈 · 한강 웰컴 버스킹','버스킹 존','B',40],
+ ['16:00','K맛집 시식 투어','K맛집 스트리트','A',50],
+ ['17:00','노을 어쿠스틱 라이브','메인 무대','B',50],
+ ['18:00','달빛 퍼레이드','잠수교 전 구간','E',60],
  ['18:30','K맛집 라이브 쿠킹쇼','K맛집 스트리트','A',40],
  ['19:00','한강 어쿠스틱 버스킹','버스킹 존','B',50],
  ['19:30','K-POP 커버댄스 스테이지','메인 무대','B',40],
@@ -728,7 +731,7 @@ var PROG=[
 ];
 /* ===== time helpers ===== */
 function now(){return new Date()}
-function isOpenDay(d){var w=d.getDay();return w===5||w===6||w===0}
+function isOpenDay(d){return true}
 function mins(t){var p=t.split(':');return +p[0]*60+ +p[1]}
 function nowM(){var d=now();return d.getHours()*60+d.getMinutes()}
 function pad(n){return ('0'+n).slice(-2)}
@@ -768,10 +771,9 @@ document.addEventListener('focusin',function(e){if(/INPUT|TEXTAREA|SELECT/.test(
 
 /* ===== home ===== */
 function liveState(){var d=now(),m=nowM(),o=isOpenDay(d);
- if(o&&m>=1080)return {open:1,t:'영업 중 · 24:00까지'};
- if(o&&m<1080)return {open:0,t:'오늘 밤 18:00 OPEN'};
- var nd=openDays(1)[0];return {open:0,t:'다음 오픈 '+dl(nd)+' 18:00'}}
-function visitors(){var d=now(),m=nowM();if(!isOpenDay(d)||m<1080)return 0;var x=(m-1080)/360;return Math.round(4200+Math.sin(Math.PI*Math.min(1,x*1.3))*14800+(Math.random()*240))}
+ if(o&&m>=900)return {open:1,t:'영업 중 · 24:00까지'};
+ return {open:0,t:'오늘 15:00 OPEN · 365일 매일'}}
+function visitors(){var d=now(),m=nowM();if(!isOpenDay(d)||m<900)return 0;var x=(m-900)/540;return Math.round(4200+Math.sin(Math.PI*Math.min(1,x*1.3))*14800+(Math.random()*240))}
 function nextShow(){var m=nowM(),o=isOpenDay(now());if(!o)return {t:'18:00',p:PROG[0]};for(var i=0;i<PROG.length;i++)if(mins(PROG[i][0])>m)return {t:PROG[i][0],p:PROG[i]};return {t:'내일',p:null}}
 function curShow(){var m=nowM();if(!isOpenDay(now()))return -1;for(var i=0;i<PROG.length;i++){var s=mins(PROG[i][0]),e=s+PROG[i][4];if(m>=s&&m<e)return i}return -1}
 function homeLive(){var L=liveState();$('lv').classList.toggle('off',!L.open);$('lvT').textContent=L.t;
@@ -869,7 +871,7 @@ function bookForm(c){if(c==='belt')c='y1';c=BK[c]?c:'mu';var K=BK[c],days=openDa
  var times=K.times;var price=K.price;
  function taken(d,t){return S.bk.filter(function(b){return b.c===c&&b.d===d&&b.t===t}).reduce(function(a,b){return a+b.n},0)}
  sheet(K.n+' 예약',
- '<div class="fm"><div><label>날짜 (금·토·일 운행)</label><div class="ops" id="bD">'+days.map(function(d){return '<button data-v="'+dk(d)+'">'+dl(d)+'</button>'}).join('')+'</div></div>'+
+ '<div class="fm"><div><label>날짜 (365일 매일 운행)</label><div class="ops" id="bD">'+days.map(function(d){return '<button data-v="'+dk(d)+'">'+dl(d)+'</button>'}).join('')+'</div></div>'+
  '<div><label>'+(c==='boat'?'승선 시간':'출발 시간')+'</label><div class="ops" id="bT">'+times.map(function(t){return '<button data-v="'+t+'">'+t+(K.lab[t]||'')+'</button>'}).join('')+'</div><p class="nt" id="bR" style="margin-top:6px"></p></div>'+
  '<div><label>인원</label><div class="cnt"><button id="bM" aria-label="빼기">−</button><b id="bN2">2</b><button id="bP" aria-label="더하기">+</button></div></div>'+
  '<div><label for="bNm">예약자 이름</label><input id="bNm" maxlength="12" placeholder="이름" autocomplete="name" value="'+esc(S.nm||'')+'"></div>'+
@@ -1066,3 +1068,5 @@ badge();show('home');
 </script>
 </body>
 </html>
+
+</body></html>
