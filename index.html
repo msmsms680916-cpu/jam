@@ -432,6 +432,38 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 
 @media(max-width:360px){.qm i{width:48px;height:48px}.qm button{font-size:12px;letter-spacing:-.6px}.hc h2{font-size:24px}.rt span{font-size:12px}.bl img{width:54px;height:54px}.bl button{width:56px}.bl:before{top:27px}.dot{top:23px}.vg{grid-template-columns:repeat(5,1fr);gap:3px}.vg i{width:44px;height:44px}}
 
+
+/* digital money */
+.dmc{display:block;width:100%;text-align:left;padding:16px;border-radius:22px;background:linear-gradient(135deg,#2a1d63,#13285e 60%,#0d2a4a);border:1px solid rgba(155,140,255,.35);color:#fff}
+.dmt small{font-size:12.5px;color:#cfc7ff;font-weight:700}.dmt b{display:block;font-size:20px;font-weight:900;letter-spacing:-.5px;margin-top:2px}
+.dmr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.dmr span{display:flex;align-items:center;gap:7px;padding:9px 8px;border-radius:14px;background:rgba(255,255,255,.1);font-size:12px;font-weight:700;line-height:1.3}
+.dmr i{flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;color:#0b1530;font-size:13px}
+.wl{margin:12px 12px 0;padding:18px 16px;border-radius:22px;background:linear-gradient(135deg,#2a1d63,#13285e 60%,#0d2a4a);color:#fff}
+.wl small{font-size:12.5px;color:#cfc7ff;font-weight:700}
+.wl .tot{font-size:30px;font-weight:900;letter-spacing:-1px;margin-top:2px;font-variant-numeric:tabular-nums}
+.wl .tot span{font-size:15px;margin-left:3px}
+.wl .row{display:flex;gap:8px;margin-top:14px}
+.wl .row button{flex:1;height:44px;border-radius:12px;background:rgba(255,255,255,.14);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px}
+.wl .row button svg{width:20px;height:20px;flex:none}
+.use div{letter-spacing:-.4px;word-break:break-all}
+.wl .row button.p{background:linear-gradient(180deg,#ffd57a,#f0ad37);color:#1d1400}
+.mn3{display:flex;flex-direction:column;gap:10px;margin:14px 14px 0}
+.mn{display:flex;gap:12px;align-items:center;padding:14px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.mn>i{flex:none;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;font-size:18px;color:#0b1530}
+.mn div{flex:1;min-width:0}.mn b{font-size:15.5px;font-weight:900}.mn small{display:block;font-size:12.5px;color:var(--sub);line-height:1.45}
+.mn em{flex:none;font-style:normal;text-align:right;font-size:17px;font-weight:900;font-variant-numeric:tabular-nums}
+.mn em small{font-size:12px;color:var(--mut);font-weight:500}
+.mn .soon{font-size:12px;font-weight:900;color:#9b8cff;border:1px solid rgba(155,140,255,.5);border-radius:999px;padding:2px 8px}
+.use{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.use div{display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 4px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-size:12.5px;font-weight:700;text-align:center}
+.use svg{width:24px;height:24px;color:var(--gold)}
+.txl .bt b{font-size:14.5px}
+.txl .bt .am{flex:none;font-weight:900;font-variant-numeric:tabular-nums}
+.payq{display:flex;flex-direction:column;align-items:center;gap:10px;padding:16px;border-radius:18px;background:#fff;color:#0b1530}
+.payq canvas{width:180px;height:180px}
+.payq b{font-size:16px}.payq small{font-size:12.5px;color:#56607c}
+html.lt .dmc,html.lt .wl{background:linear-gradient(135deg,#1f3d82,#13285a);border-color:#13285a}
 /* ===== theme toggle ===== */
 .thm{display:flex;gap:6px;margin:12px 12px 0;padding:4px;border-radius:999px;background:var(--bg2);border:1px solid var(--line)}
 .thm button{flex:1;height:40px;border-radius:999px;font-size:14px;font-weight:900;color:var(--mut);display:flex;align-items:center;justify-content:center;gap:6px}
@@ -572,6 +604,12 @@ html.lt .mapw text[fill="rgba(160,200,255,.5)"]{fill:#5d86c4}
  </div>
 
  <div class="sec">
+  <div class="st"><h3>디지털머니 <span class="new">NEW</span></h3><button class="mr" data-go="money">지갑 ›</button></div>
+  <button class="dmc" data-go="money"><div class="dmt"><small>야시장 · 관광버스 · 쇼핑몰 어디서나</small><b>잠수교 디지털머니</b></div>
+   <div class="dmr"><span><i style="background:#f5c35b">₩</i>잠수교<br>전자상품권</span><span><i style="background:#6cb8ff">P</i>한강<br>포인트</span><span><i style="background:#9b8cff">S</i>서울<br>코인</span></div></button>
+ </div>
+
+ <div class="sec">
   <div class="st"><h3>K-Market01 <span class="new">쇼핑몰</span></h3><button class="mr" data-go="mall">전체 ›</button></div>
   <button class="kmb" data-go="mall"><div><small>잠수교 야시장 공식몰 · B2C · B2B</small><b>입점업체 상품과<br>관광상품을 한 곳에서</b><span>K맛집 밀키트 · 뷰티 · 굿즈 · 관광패스</span></div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></i></button>
  </div>
@@ -687,6 +725,9 @@ html.lt .mapw text[fill="rgba(160,200,255,.5)"]{fill:#5d86c4}
  </div>
 </section>
 
+<!-- MONEY -->
+<section class="vw" id="v-money"></section>
+
 <!-- MALL -->
 <section class="vw" id="v-mall"></section>
 
@@ -722,7 +763,7 @@ var tt;function toast(m){var t=$('toast');t.textContent=m;t.classList.add('on');
 /* store */
 var KEY='jamsugyoV1',S;
 try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}
-S=S||{};S.stamps=S.stamps||{};S.bk=S.bk||[];S.al=S.al||{};S.like=S.like||{};S.cart=S.cart||{};S.orders=S.orders||[];
+S=S||{};S.stamps=S.stamps||{};S.bk=S.bk||[];S.al=S.al||{};S.like=S.like||{};S.cart=S.cart||{};S.orders=S.orders||[];S.wal=S.wal||{gc:0,hp:3000,sc:0,tx:[['한강포인트','가입 환영 적립',3000,Date.now()]]};
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 
 /* ===== data ===== */
@@ -814,11 +855,11 @@ function dl(d){return (d.getMonth()+1)+'.'+d.getDate()+' ('+WD[d.getDay()]+')'}
 
 /* ===== nav ===== */
 var cur='home',layer=null,exitT=0;
-var TITLE={mall:'K-Market01',map:'야시장 지도',tour:'K-투어',prog:'K공연 · 프로그램',prop:'상권 조성 제안서',my:'내 예약 · 주문'};
-var TAB={mall:'home',home:'home',map:'map',tour:'tour',prog:'prog',prop:'prop',my:''};
+var TITLE={money:'디지털머니',mall:'K-Market01',map:'야시장 지도',tour:'K-투어',prog:'K공연 · 프로그램',prop:'상권 조성 제안서',my:'내 예약 · 주문'};
+var TAB={money:'home',mall:'home',home:'home',map:'map',tour:'tour',prog:'prog',prop:'prop',my:''};
 var R={};
 function show(v,a,back){cur=v;Q('.vw').forEach(function(e){e.classList.toggle('on',e.id==='v-'+v)});
- var root=v!=='my'&&v!=='mall';$('hB').style.display=root?'none':'flex';
+ var root=v!=='my'&&v!=='mall'&&v!=='money';$('hB').style.display=root?'none':'flex';
  $('hL').style.display=v==='home'?'flex':'none';$('hT').style.display=v==='home'?'none':'block';$('hT').textContent=TITLE[v]||'';
  Q('#bn button').forEach(function(b){b.classList.toggle('on',b.dataset.tab===TAB[v])});
  if(R[v])R[v](a);if(!back)$('mn').scrollTop=0}
@@ -905,7 +946,7 @@ function zoneSheet(z){var Zd=ZONES[z];
  sheet(z+' · '+Zd.n,'<div class="zh"><img src="'+IMG[Zd.img]+'" alt=""><p>'+esc(Zd.d)+'</p></div>'+
  '<div>'+Zd.b.map(function(b,i){var id=z+i;return '<div class="bt"><i style="background:'+ZC[z]+'">'+z+(i+1)+'</i><div><b>'+esc(b[0])+'</b><small>'+esc(b[1])+'</small></div><button class="lk'+(S.like[id]?' on':'')+'" data-like="'+id+'" aria-label="찜">'+ic('heart')+'</button></div>'}).join('')+'</div>'+
  '<div style="margin-top:14px">'+(S.stamps[z]?'<button class="btn l" disabled>✓ '+z+' 구역 스탬프 완료</button>':'<button class="btn" id="stB">'+ic('stamp')+'현장 QR로 스탬프 찍기</button>')+'</div><p class="nt" style="margin-top:8px;text-align:center">시안에서는 버튼을 누르면 바로 찍혀요. 실제 운영 시 부스 QR 인증.</p>',
- function(){var b=$('stB');if(b)b.onclick=function(){S.stamps[z]=Date.now();save();badge();toast(z+' 구역 스탬프 쾅! ('+Object.keys(S.stamps).length+'/5)');zoneSheet(z);if(cur==='map')R.map()}})}
+ function(){var b=$('stB');if(b)b.onclick=function(){S.stamps[z]=Date.now();S.wal.hp+=500;wtx('hp','스탬프 '+z+' 구역',500);save();badge();toast(z+' 구역 스탬프 쾅! ('+Object.keys(S.stamps).length+'/5)');zoneSheet(z);if(cur==='map')R.map()}})}
 function facSheet(k){if(k==='pin'){ACT.way();return}var f=FAC.filter(function(x){return x[0]===k})[0];if(!f)return;
  var D={info:'남단 입구 종합안내소에서 지도·프로그램 안내, 분실물 접수, 휠체어·유모차 대여를 도와드려요.',med:'중앙 구간 의무실에 간호사가 상주합니다. 응급 시 가까운 운영요원이나 119.',wc:'남단·북단 입구 쪽에 화장실이 있어요. 남단에는 수유실도 함께 운영(안).',bus:'반포한강공원 셔틀 승차장. 용산 뮤지엄 버스와 Y축 관광벨트 셔틀이 여기서 출발해요.',globe:'영어·중국어·일본어 통역 데스크. Foreign visitors welcome!',lost:'분실물은 종합안내소에서 접수·보관합니다.'};
  sheet(f[1],'<p class="dsc">'+D[k]+'</p><dl class="kv"><dt>위치</dt><dd>'+f[2]+'</dd><dt>운영</dt><dd>야시장 운영 시간 동안</dd></dl>'+(k==='bus'?'<button class="btn" style="margin-top:16px" id="fB">Y축 벨트 노선 보기</button>':''),function(){var b=$('fB');if(b)b.onclick=function(){swap(function(){go('tour','belt')})}})}
@@ -999,7 +1040,7 @@ R.my=function(){var n=Object.keys(S.stamps).length,done=n>=5;
  h+='<div class="sec" style="margin-top:22px"><div class="st"><h3>내 탑승권</h3><small>'+S.bk.length+'건</small></div></div>';
  h+=S.bk.length?S.bk.map(function(b){return '<div class="tk"><div class="l"><small>'+(BK[b.c]||BK.mu).n+'</small><b>'+dl(new Date(b.d+'T00:00:00'))+' '+b.t+'</b><p>'+esc(b.nm)+' · '+b.n+'명 · '+b.id+'</p><button class="chip" data-cx="'+b.id+'" style="margin-top:8px">예약 취소</button></div><div class="r"><canvas data-qr="'+b.id+'" width="70" height="70"></canvas><small>탑승 QR</small></div></div>'}).join(''):'<div class="emp">아직 예약한 탑승권이 없어요.<br><button class="btn" data-act="book" style="margin-top:12px">용산 뮤지엄 버스 예약</button></div>';
  h+='<div class="sec" style="margin-top:22px"><div class="st"><h3>K-Market01 주문</h3><small>'+S.orders.length+'건</small><button class="mr" data-go="mall">쇼핑몰 ›</button></div></div>'+(S.orders.length?S.orders.map(function(o){return '<div class="tk"><div class="l"><small>'+(o.b2b?'B2B 견적 요청':'B2C 주문 · '+esc(o.rv||''))+'</small><b>'+esc(o.pk||(o.items||[]).map(function(it){var p=PRD.filter(function(x){return x[0]===it[0]})[0];return p?p[3]+' ×'+it[1]:''}).join(', '))+'</b><p>'+esc(o.nm)+' · '+o.id+(o.sum?' · '+won(o.sum):'')+'</p></div></div>'}).join(''):'<div class="emp">아직 주문이 없어요.</div>');
- h+='<div class="card ml"><button data-go="prog">'+ic('bell')+'공연 알림<span>'+Object.keys(S.al).length+'개</span></button><button data-act="install">'+ic('down')+'앱으로 설치하기<span>홈 화면에 추가</span></button><button data-act="reset">'+ic('reset')+'시안 데이터 초기화</button></div>';
+ h+='<div class="card ml"><button data-go="money">'+ic('coin')+'디지털머니 지갑<span>'+(S.wal.gc+S.wal.hp).toLocaleString()+'원</span></button><button data-go="prog">'+ic('bell')+'공연 알림<span>'+Object.keys(S.al).length+'개</span></button><button data-act="install">'+ic('down')+'앱으로 설치하기<span>홈 화면에 추가</span></button><button data-act="reset">'+ic('reset')+'시안 데이터 초기화</button></div>';
  $('v-my').innerHTML=h;Q('canvas[data-qr]').forEach(qr)};
 function qr(c){var x=c.getContext('2d'),id=c.dataset.qr,n=21,s=70/n,h=0;for(var i=0;i<id.length;i++)h=(h*31+id.charCodeAt(i))>>>0;
  x.fillStyle='#fff';x.fillRect(0,0,70,70);x.fillStyle='#0b1530';
@@ -1014,7 +1055,7 @@ var ACT={
  way:function(){sheet('오시는 길','<p class="dsc">잠수교 보행 구간 (반포대교 하층) · 서울 서초구 반포동 ↔ 용산구 서빙고동</p><div>'+[['지하철','3·7·9호선 고속터미널역 → 반포한강공원 도보 약 15분'],['버스','반포한강공원·세빛섬 정류장 하차'],['셔틀','Y축 관광벨트 · 용산 뮤지엄 버스'],['한강버스','잠수교 선착장 (유치 제안) · 현재는 여의도·잠원 선착장'],['자전거','따릉이 반포한강공원 대여소']].map(function(x){return '<div class="bt"><i style="background:var(--card2);color:var(--gold);width:56px">'+x[0]+'</i><div><small style="color:var(--ink);font-size:14px">'+x[1]+'</small></div></div>'}).join('')+'</div><p class="nt" style="margin-top:10px">운영일에는 잠수교 차량 통행이 통제돼요(안). 대중교통을 이용해 주세요.</p>')},
  foreign:function(){sheet('Foreign Visitor Welcome','<p class="dsc">Welcome to Jamsugyo Night Market! Interpretation desk at the south entrance (EN · 中文 · 日本語).<br><br>欢迎来到潜水桥夜市！<br>潜水橋ナイトマーケットへようこそ！</p>')},
  install:function(){if(dPrompt){dPrompt.prompt();dPrompt=null;return}var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);sheet('앱으로 설치하기','<div class="card" style="padding:14px"><b>'+(ios?'아이폰 · 사파리':'안드로이드 · 크롬/삼성인터넷')+'</b><p class="dsc" style="margin-top:4px">'+(ios?'아래쪽 공유 버튼(□↑) → 홈 화면에 추가':'메뉴 ⋮ / ≡ → 홈 화면에 추가 또는 앱 설치')+'</p></div><p class="nt" style="margin-top:10px">홈 화면 아이콘으로 열면 주소창 없이 앱처럼 전체 화면으로 열려요.</p>')},
- reset:function(){sheet('시안 데이터 초기화','<p class="dsc">스탬프·탑승권·주문·알림을 모두 지울까요?</p><button class="btn" id="rsY" style="margin-top:16px">모두 지우기</button>',function(){$('rsY').onclick=function(){S={stamps:{},bk:[],al:{},like:{},cart:{},orders:[]};save();badge();closeL();R.my();toast('초기화했어요')}})},
+ reset:function(){sheet('시안 데이터 초기화','<p class="dsc">스탬프·탑승권·주문·알림을 모두 지울까요?</p><button class="btn" id="rsY" style="margin-top:16px">모두 지우기</button>',function(){$('rsY').onclick=function(){S={stamps:{},bk:[],al:{},like:{},cart:{},orders:[],wal:{gc:0,hp:3000,sc:0,tx:[]}};save();badge();closeL();R.my();toast('초기화했어요')}})},
  shareP:function(){var u=location.href.split('#')[0];if(navigator.share){navigator.share({title:'잠수교 야시장 상권 조성 제안서',text:'세계가 찾는 잠수교 야시장 — 제안서 앱',url:u}).catch(function(){})}else{try{navigator.clipboard.writeText(u);toast('링크를 복사했어요')}catch(e){toast(u)}}}
 };
 
@@ -1136,6 +1177,32 @@ document.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' '
  var a=document.createElement('link');a.rel='apple-touch-icon';a.href=ico;document.head.appendChild(a)}catch(e){}})();
 setInterval(function(){if(cur==='home'&&!document.hidden)homeLive()},30000);
 badge();
+
+/* ===== digital money ===== */
+var WN={gc:['잠수교 전자상품권','₩','#f5c35b','원'],hp:['한강포인트','P','#6cb8ff','P'],sc:['서울코인','S','#9b8cff','SC']};
+function wsave(){save()}
+function wtx(k,t,a){S.wal.tx.unshift([WN[k][0],t,a,Date.now()]);S.wal.tx=S.wal.tx.slice(0,30)}
+R.money=function(){var W=S.wal,tot=W.gc+W.hp;
+ var h='<div class="wl"><small>사용 가능한 디지털머니</small><div class="tot">'+tot.toLocaleString()+'<span>원</span></div><div class="row"><button class="p" data-act="wpay">'+ic('ticket')+'결제 QR</button><button data-act="wcharge">'+ic('coin')+'상품권 충전</button></div></div>'+
+ '<div class="mn3">'+
+ '<div class="mn"><i style="background:#f5c35b">₩</i><div><b>잠수교 전자상품권</b><small>충전 시 10% 할인 · 야시장 부스 · 관광버스 · K-Market01 결제</small></div><em>'+W.gc.toLocaleString()+'<small> 원</small></em></div>'+
+ '<div class="mn"><i style="background:#6cb8ff">P</i><div><b>한강포인트</b><small>결제 · 스탬프 · 한강버스 이용 시 적립, 1P = 1원처럼 사용</small></div><em>'+W.hp.toLocaleString()+'<small> P</small></em></div>'+
+ '<div class="mn"><i style="background:#9b8cff">S</i><div><b>서울코인</b><small>서울시 협의 후 도입 · 한강포인트 전환 · 서울 관광지 연계 사용</small></div><span class="soon">도입 예정</span></div>'+
+ '</div>'+
+ '<div class="sec"><div class="st"><h3>어디서 쓰나요</h3></div><div class="use"><div>'+ic('food')+'K맛집 부스</div><div>'+ic('bus')+'관광버스</div><div>'+ic('boat')+'한강버스</div><div>'+ic('bag')+'K-Market01</div></div></div>'+
+ '<div class="sec"><div class="st"><h3>포인트 모으기</h3></div><div class="card" style="padding:4px 14px">'+
+  [['결제 금액의 3% 적립','상품권 · 카드 결제 모두'],['스탬프 1개 = 500P','5개 구역 스탬프 투어'],['한강버스 · 관광버스 이용 = 1,000P','탑승권 QR 인증 시'],['외국인 첫 방문 = 3,000P','여권 인증 · 통역 데스크']].map(function(x){return '<div class="bt"><i style="background:#6cb8ff;color:#0b1530;font-size:15px">P</i><div><b>'+x[0]+'</b><small>'+x[1]+'</small></div></div>'}).join('')+'</div></div>'+
+ '<div class="sec"><div class="st"><h3>이용 내역</h3></div><div class="card txl" style="padding:4px 14px">'+(W.tx.length?W.tx.map(function(t){return '<div class="bt"><div><b>'+esc(t[1])+'</b><small>'+esc(t[0])+' · '+new Date(t[3]).toLocaleDateString('ko-KR')+'</small></div><span class="am" style="color:'+(t[2]<0?'var(--pink)':'var(--mint)')+'">'+(t[2]>0?'+':'')+t[2].toLocaleString()+'</span></div>'}).join(''):'<p class="nt" style="padding:14px 0">아직 내역이 없어요</p>')+'</div></div>'+
+ '<p class="nt" style="margin:14px 16px 0">시안 화면이라 실제 충전 · 결제는 되지 않아요. 전자상품권 · 서울코인은 관계 법령과 서울시 · 용산구 협의에 따라 도입됩니다.</p>';
+ $('v-money').innerHTML=h};
+ACT.wcharge=function(){var amt=30000;sheet('잠수교 전자상품권 충전','<div class="fm"><div><label>충전 금액</label><div class="ops" id="wA">'+[10000,30000,50000,100000].map(function(a){return '<button data-v="'+a+'" class="'+(a===amt?'on':'')+'">'+a.toLocaleString()+'원</button>'}).join('')+'</div></div><div class="sum"><span>결제 금액 (10% 할인)</span><b id="wP"></b></div><button class="btn" id="wGo">충전하기</button><p class="nt">1인 월 구매 한도 등 세부 기준은 운영 단계에서 정해요.</p></div>',function(){
+ function u(){Q('#wA button').forEach(function(b){b.classList.toggle('on',+b.dataset.v===amt)});$('wP').textContent=Math.round(amt*.9).toLocaleString()+'원'}
+ Q('#wA button').forEach(function(b){b.onclick=function(){amt=+b.dataset.v;u()}});u();
+ $('wGo').onclick=function(){S.wal.gc+=amt;wtx('gc','충전 (10% 할인)',amt);wsave();closeL();R.money();toast(amt.toLocaleString()+'원이 충전됐어요')}})};
+ACT.wpay=function(){var id='PAY'+Date.now().toString(36).toUpperCase().slice(-6);sheet('결제 QR','<div class="payq"><canvas data-qr="'+id+'" width="70" height="70"></canvas><b>부스 · 버스 단말기에 보여주세요</b><small>'+id+' · 3분간 유효 · 잔액 '+(S.wal.gc+S.wal.hp).toLocaleString()+'원</small></div><button class="btn l" id="wDemo" style="margin-top:12px">시연: 한강 분식 6,000원 결제</button>',function(){
+ Q('#sh canvas[data-qr]').forEach(qr);
+ $('wDemo').onclick=function(){var need=6000,useP=Math.min(S.wal.hp,need),rest=need-useP;if(rest>S.wal.gc){toast('잔액이 부족해요. 상품권을 충전해 주세요');return}
+  if(useP){S.wal.hp-=useP;wtx('hp','한강 분식 결제',-useP)}if(rest){S.wal.gc-=rest;wtx('gc','한강 분식 결제',-rest)}var pt=Math.round(need*.03);S.wal.hp+=pt;wtx('hp','결제 적립 3%',pt);wsave();closeL();R.money();toast('결제 완료 · '+pt+'P 적립')}})};
 /* theme */
 function applyTheme(t){var lt=t==='lt';document.documentElement.classList.toggle('lt',lt);try{localStorage.setItem('jsTheme',t)}catch(e){}
  Q('[data-th]').forEach(function(b){b.classList.toggle('on',b.dataset.th===t)});
