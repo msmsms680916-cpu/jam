@@ -446,7 +446,7 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 .wl .row{display:flex;gap:8px;margin-top:14px}
 .wl .row button{flex:1;height:44px;border-radius:12px;background:rgba(255,255,255,.14);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px}
 .wl .row button svg{width:20px;height:20px;flex:none}
-.use div{letter-spacing:-.4px;word-break:break-all}
+.use div{letter-spacing:-.6px;word-break:keep-all;font-size:12px;white-space:nowrap}
 .wl .row button.p{background:linear-gradient(180deg,#ffd57a,#f0ad37);color:#1d1400}
 .mn3{display:flex;flex-direction:column;gap:10px;margin:14px 14px 0}
 .mn{display:flex;gap:12px;align-items:center;padding:14px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
@@ -464,6 +464,15 @@ main{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;o
 .payq canvas{width:180px;height:180px}
 .payq b{font-size:16px}.payq small{font-size:12.5px;color:#56607c}
 html.lt .dmc,html.lt .wl{background:linear-gradient(135deg,#1f3d82,#13285a);border-color:#13285a}
+
+.itr{padding:16px}
+.itx{font-size:14.5px;color:var(--sub);line-height:1.7}.itx b{color:var(--ink)}
+.izs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:14px}
+.izs button{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 2px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);font-size:12px;font-weight:700;letter-spacing:-.5px;white-space:nowrap}
+.izs em{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;color:#1a1300;font-size:14px}
+.idl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin-top:14px;font-size:13.5px}
+.idl dt{color:var(--mut);font-weight:700}.idl dd{color:var(--ink)}
+.ibt{display:flex;gap:8px;margin-top:14px}.ibt .btn{height:48px;font-size:15px}.ibt .btn.l{width:42%}
 /* ===== theme toggle ===== */
 .thm{display:flex;gap:6px;margin:12px 12px 0;padding:4px;border-radius:999px;background:var(--bg2);border:1px solid var(--line)}
 .thm button{flex:1;height:40px;border-radius:999px;font-size:14px;font-weight:900;color:var(--mut);display:flex;align-items:center;justify-content:center;gap:6px}
@@ -570,7 +579,7 @@ html.lt .mapw text[fill="rgba(160,200,255,.5)"]{fill:#5d86c4}
   </div>
  </div>
  <div class="qm">
-  <button data-go="map"><i style="background:linear-gradient(150deg,#5b8cff,#3046c9)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></i>야시장 지도</button>
+  <button data-go="money"><span class="new">NEW</span><i style="background:linear-gradient(150deg,#a894ff,#4b3bc4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="7" rx="7" ry="3"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg></i>디지털머니</button>
   <button data-zone="A"><i style="background:linear-gradient(150deg,#ffc35b,#e0832a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16a8 8 0 01-16 0z"/><path d="M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3"/><path d="M3 21h18"/></svg></i>K맛집</button>
   <button data-zone="D"><i style="background:linear-gradient(150deg,#58e6cb,#169c88)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2M12 10v6M9 13h6"/></svg></i>K뷰티/의료</button>
   <button data-go="prog"><i style="background:linear-gradient(150deg,#a894ff,#6a4ee0)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3M8 21h8"/></svg></i>K공연</button>
@@ -636,6 +645,22 @@ html.lt .mapw text[fill="rgba(160,200,255,.5)"]{fill:#5d86c4}
  <div class="sec"><button class="bnr" data-act="safety"><img data-i="safe" alt=""><div><small>안전한 야시장</small><b>인파 관리부터<br>응급 대응까지</b><span>안전·편의 안내 ›</span></div></button></div>
 
  <div class="sec"><button class="pp" data-go="prop"><img data-i="pg_poster" alt="잠수교 야시장 상권 조성 제안서 표지"><div><small>용산구청 귀중 · 2026</small><b>잠수교 야시장<br>상권 조성 제안서</b><p>비전 · Y축 관광벨트 · 한강버스 · 뮤지엄 버스 · 안전 · 예산 50억 ›</p></div></button></div>
+
+ <div class="sec">
+  <div class="st"><h3>잠수교 야시장 소개</h3></div>
+  <div class="card itr">
+   <p class="itx">한강 잠수교 보행 구간에 펼쳐지는 <b>365일 야간 문화시장</b>이에요. 다섯 구역에서 먹고, 보고, 체험하고, 쉬어 가세요.</p>
+   <div class="izs">
+    <button data-zone="A"><em style="background:#f5c35b">A</em>K맛집</button>
+    <button data-zone="B"><em style="background:#9b8cff">B</em>K공연</button>
+    <button data-zone="C"><em style="background:#ff7bb5">C</em>K패션</button>
+    <button data-zone="D"><em style="background:#43e0c2">D</em>K뷰티/의료</button>
+    <button data-zone="E"><em style="background:#6cb8ff">E</em>포토존</button>
+   </div>
+   <dl class="idl"><dt>운영</dt><dd>365일 매일 15:00 ~ 24:00</dd><dt>위치</dt><dd>잠수교 보행 구간 (용산 이촌·서빙고 ↔ 반포한강공원)</dd><dt>교통</dt><dd>Y축 관광버스 · 뮤지엄버스 · 한강버스 · 지하철 고속터미널역</dd></dl>
+   <div class="ibt"><button class="btn" data-go="map"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>야시장 지도 보기</button><button class="btn l" data-act="way">오시는 길</button></div>
+  </div>
+ </div>
 
  <div class="foot"><b>잠수교 야시장 (제안 시안)</b><br>운영(안) 365일 매일 15:00~24:00 · 잠수교 보행 구간<br>Y축 관광벨트 · 한강버스 잠수교 선착장(유치 제안)<br>제안 (주)한강의기적 · 화면의 일정·요금·인원은 시안용 예시입니다.</div>
 </section>
@@ -737,7 +762,7 @@ html.lt .mapw text[fill="rgba(160,200,255,.5)"]{fill:#5d86c4}
 
 <nav class="bn" id="bn">
  <button data-tab="home" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1z"/></svg>홈</button>
- <button data-tab="map"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>지도</button>
+ <button data-tab="money"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="7" rx="7" ry="3"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/></svg>디지털머니</button>
  <button data-tab="tour"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16M8 21v-3M16 21v-3"/><circle cx="8" cy="14.5" r=".8" fill="currentColor"/><circle cx="16" cy="14.5" r=".8" fill="currentColor"/></svg>K-투어</button>
  <button data-tab="prog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>프로그램</button>
  <button data-tab="prop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>제안서</button>
@@ -856,10 +881,10 @@ function dl(d){return (d.getMonth()+1)+'.'+d.getDate()+' ('+WD[d.getDay()]+')'}
 /* ===== nav ===== */
 var cur='home',layer=null,exitT=0;
 var TITLE={money:'디지털머니',mall:'K-Market01',map:'야시장 지도',tour:'K-투어',prog:'K공연 · 프로그램',prop:'상권 조성 제안서',my:'내 예약 · 주문'};
-var TAB={money:'home',mall:'home',home:'home',map:'map',tour:'tour',prog:'prog',prop:'prop',my:''};
+var TAB={money:'money',mall:'home',home:'home',map:'',tour:'tour',prog:'prog',prop:'prop',my:''};
 var R={};
 function show(v,a,back){cur=v;Q('.vw').forEach(function(e){e.classList.toggle('on',e.id==='v-'+v)});
- var root=v!=='my'&&v!=='mall'&&v!=='money';$('hB').style.display=root?'none':'flex';
+ var root=v!=='my'&&v!=='mall';$('hB').style.display=root?'none':'flex';
  $('hL').style.display=v==='home'?'flex':'none';$('hT').style.display=v==='home'?'none':'block';$('hT').textContent=TITLE[v]||'';
  Q('#bn button').forEach(function(b){b.classList.toggle('on',b.dataset.tab===TAB[v])});
  if(R[v])R[v](a);if(!back)$('mn').scrollTop=0}
